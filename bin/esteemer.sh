@@ -52,8 +52,8 @@ if [[ -z ${FUSEKI_PING}} || ${FUSEKI_PING} -ne 200 ]]; then
   echo >&2 "Fuseki not running locally."; 
 
   # Try to start custom fuseki locally
-  FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.8.0
-  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &!
+  FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.10.0
+  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &
 
   exit 1;
 fi
