@@ -1,0 +1,381 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000045"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000104",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000041"
+  }, {
+    "@id" : "_:b12",
+    "columns" : [ "_:b4", "_:b13", "_:b14", "_:b15" ]
+  }, {
+    "@id" : "_:b13",
+    "ColumnUse" : "time",
+    "description" : "Performance calendar month.",
+    "datatype" : "date",
+    "name" : "time",
+    "title" : "Time"
+  }, {
+    "@id" : "_:b14",
+    "ColumnUse" : "measure",
+    "description" : "Name of measurement",
+    "datatype" : "string",
+    "name" : "measure",
+    "title" : "Measure"
+  }, {
+    "@id" : "_:b15",
+    "ColumnUse" : "rate",
+    "description" : "Example measured rate",
+    "datatype" : "double",
+    "name" : "rate",
+    "title" : "Measured Rate"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b17",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000085",
+    "RO_0000091" : [ "_:b16", "_:b18" ]
+  }, {
+    "@id" : "_:b18",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000104",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000085",
+    "RO_0000091" : "_:b20"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "http://purl.org/dc/terms/title" : "PEERS",
+    "http://schema.org/name" : "peers"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "http://www.w3.org/ns/csvw#Table",
+    "http://purl.org/dc/terms/title" : "Demonstration Performance Data",
+    "dialect" : "_:b22",
+    "tableSchema" : "_:b12"
+  }, {
+    "@id" : "_:b22",
+    "commentPrefix" : "",
+    "delimiter" : ",",
+    "http://www.w3.org/ns/csvw#doubleQuote" : true,
+    "encoding" : "utf-8",
+    "http://www.w3.org/ns/csvw#header" : true,
+    "headerRowCount" : "1",
+    "lineTerminators" : "\\n",
+    "quoteChar" : "\"",
+    "http://www.w3.org/ns/csvw#skipBlankRows" : true,
+    "skipColumns" : "",
+    "http://www.w3.org/ns/csvw#skipInitialSpace" : false,
+    "skipRows" : "",
+    "http://www.w3.org/ns/csvw#trim" : false
+  }, {
+    "@id" : "_:b23",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000041"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000045"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b26",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000117"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b28",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000117"
+  }, {
+    "@id" : "_:b29",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000085",
+    "RO_0000091" : [ "_:b5", "_:b27" ]
+  }, {
+    "@id" : "_:b3",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000102",
+    "WithComparator" : "_:b2",
+    "http://purl.org/dc/terms/title" : "Demonstration Measure",
+    "identifier" : "demo"
+  }, {
+    "@id" : "_:b30",
+    "@type" : "http://purl.obolibrary.org/obo/cpo_0000053",
+    "AncestorPerformer" : "_:pAlice",
+    "AncestorTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar",
+    "acceptable_by" : "http://feedbacktailor.org/ftkb#SocialBetter",
+    "RO_0000091" : [ "_:b7", "_:b11", "_:b28", "_:b31", "_:b32" ],
+    "PerformanceSummaryDisplay" : "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+    "PerformanceSummaryTextualEntity" : "You are a top performer this month for the measure [measure_details]"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b32",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000045"
+  }, {
+    "@id" : "_:b33",
+    "@type" : "http://schema.org/PostalAddress",
+    "addressCountry" : "USA",
+    "addressRegion" : "MI",
+    "http://schema.org/name" : "DisplayLab",
+    "postalCode" : "48109",
+    "streetAddress" : "DLHS, 1161 NIB, 300 N Ingalls St."
+  }, {
+    "@id" : "_:b34",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000085",
+    "RO_0000091" : "_:b35"
+  }, {
+    "@id" : "_:b35",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b36",
+    "@type" : "http://purl.obolibrary.org/obo/cpo_0000053",
+    "AncestorPerformer" : "_:pPeer1",
+    "AncestorTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar",
+    "RO_0000091" : [ "_:b23", "_:b24", "_:b26", "_:b37" ],
+    "PerformanceSummaryDisplay" : "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+    "PerformanceSummaryTextualEntity" : "You are a top performer this month for the measure [measure_details]"
+  }, {
+    "@id" : "_:b37",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000095",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b38",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000045"
+  }, {
+    "@id" : "_:b39",
+    "@type" : "http://purl.obolibrary.org/obo/cpo_0000053",
+    "AncestorPerformer" : "_:pPeer2",
+    "AncestorTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar",
+    "RO_0000091" : [ "_:b25", "_:b38", "_:b40", "_:b41" ],
+    "PerformanceSummaryDisplay" : "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+    "PerformanceSummaryTextualEntity" : "You are a top performer this month for the measure [measure_details]"
+  }, {
+    "@id" : "_:b4",
+    "ColumnUse" : "identifier",
+    "description" : "Name of performer",
+    "datatype" : "string",
+    "name" : "performer",
+    "title" : "Performer"
+  }, {
+    "@id" : "_:b40",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000117"
+  }, {
+    "@id" : "_:b41",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000041"
+  }, {
+    "@id" : "_:b42",
+    "@type" : "http://schema.org/Organization",
+    "address" : "_:b33"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000104",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000041"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000104",
+    "RegardingComparator" : "_:b2",
+    "RegardingMeasure" : "_:b3"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "http://purl.obolibrary.org/obo/cpo_0000053",
+    "AncestorPerformer" : "_:pPeer3",
+    "AncestorTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar",
+    "acceptable_by" : "http://feedbacktailor.org/ftkb#SocialBetter",
+    "RO_0000091" : [ "_:b0", "_:b1", "_:b6", "_:b9", "_:b10" ],
+    "PerformanceSummaryDisplay" : "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+    "PerformanceSummaryTextualEntity" : "You are a top performer this month for the measure [measure_details]"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "http://purl.obolibrary.org/obo/psdo_0000117"
+  }, {
+    "@id" : "http://example.com/app#mpog-aspire",
+    "@type" : "http://example.com/slowmo#spek",
+    "HasCandidate" : [ "_:b8", "_:b30", "_:b36", "_:b39" ],
+    "InputTable" : "_:b21",
+    "IsAboutMeasure" : "_:b3",
+    "IsAboutOrganization" : "_:b42",
+    "IsAboutPerformer" : [ "_:b17", "_:b19", "_:b29", "_:b34" ],
+    "IsAboutTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar"
+  } ],
+  "@context" : {
+    "RegardingComparator" : {
+      "@id" : "http://example.com/slowmo#RegardingComparator",
+      "@type" : "@id"
+    },
+    "RegardingMeasure" : {
+      "@id" : "http://example.com/slowmo#RegardingMeasure",
+      "@type" : "@id"
+    },
+    "ColumnUse" : {
+      "@id" : "http://example.com/slowmo#ColumnUse"
+    },
+    "datatype" : {
+      "@id" : "http://www.w3.org/ns/csvw#datatype"
+    },
+    "title" : {
+      "@id" : "http://www.w3.org/ns/csvw#title"
+    },
+    "name" : {
+      "@id" : "http://www.w3.org/ns/csvw#name"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "AncestorTemplate" : {
+      "@id" : "http://example.com/slowmo#AncestorTemplate"
+    },
+    "PerformanceSummaryDisplay" : {
+      "@id" : "psdo:PerformanceSummaryDisplay"
+    },
+    "AncestorPerformer" : {
+      "@id" : "http://example.com/slowmo#AncestorPerformer"
+    },
+    "RO_0000091" : {
+      "@id" : "http://purl.obolibrary.org/obo/RO_0000091",
+      "@type" : "@id"
+    },
+    "acceptable_by" : {
+      "@id" : "http://example.com/slowmo#acceptable_by",
+      "@type" : "@id"
+    },
+    "PerformanceSummaryTextualEntity" : {
+      "@id" : "psdo:PerformanceSummaryTextualEntity"
+    },
+    "columns" : {
+      "@id" : "http://www.w3.org/ns/csvw#columns",
+      "@type" : "@id"
+    },
+    "tableSchema" : {
+      "@id" : "http://www.w3.org/ns/csvw#tableSchema",
+      "@type" : "@id"
+    },
+    "dialect" : {
+      "@id" : "http://www.w3.org/ns/csvw#dialect",
+      "@type" : "@id"
+    },
+    "addressRegion" : {
+      "@id" : "http://schema.org/addressRegion"
+    },
+    "streetAddress" : {
+      "@id" : "http://schema.org/streetAddress"
+    },
+    "postalCode" : {
+      "@id" : "http://schema.org/postalCode"
+    },
+    "addressCountry" : {
+      "@id" : "http://schema.org/addressCountry"
+    },
+    "address" : {
+      "@id" : "http://schema.org/address",
+      "@type" : "@id"
+    },
+    "IsAboutMeasure" : {
+      "@id" : "http://example.com/slowmo#IsAboutMeasure",
+      "@type" : "@id"
+    },
+    "IsAboutOrganization" : {
+      "@id" : "http://example.com/slowmo#IsAboutOrganization",
+      "@type" : "@id"
+    },
+    "InputTable" : {
+      "@id" : "http://example.com/slowmo#InputTable",
+      "@type" : "@id"
+    },
+    "IsAboutPerformer" : {
+      "@id" : "http://example.com/slowmo#IsAboutPerformer",
+      "@type" : "@id"
+    },
+    "IsAboutTemplate" : {
+      "@id" : "http://example.com/slowmo#IsAboutTemplate",
+      "@type" : "@id"
+    },
+    "HasCandidate" : {
+      "@id" : "http://example.com/slowmo#HasCandidate",
+      "@type" : "@id"
+    },
+    "skipBlankRows" : {
+      "@id" : "http://www.w3.org/ns/csvw#skipBlankRows",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "encoding" : {
+      "@id" : "http://www.w3.org/ns/csvw#encoding"
+    },
+    "delimiter" : {
+      "@id" : "http://www.w3.org/ns/csvw#delimiter"
+    },
+    "skipColumns" : {
+      "@id" : "http://www.w3.org/ns/csvw#skipColumns"
+    },
+    "headerRowCount" : {
+      "@id" : "http://www.w3.org/ns/csvw#headerRowCount"
+    },
+    "commentPrefix" : {
+      "@id" : "http://www.w3.org/ns/csvw#commentPrefix"
+    },
+    "header" : {
+      "@id" : "http://www.w3.org/ns/csvw#header",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "doubleQuote" : {
+      "@id" : "http://www.w3.org/ns/csvw#doubleQuote",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "trim" : {
+      "@id" : "http://www.w3.org/ns/csvw#trim",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "quoteChar" : {
+      "@id" : "http://www.w3.org/ns/csvw#quoteChar"
+    },
+    "lineTerminators" : {
+      "@id" : "http://www.w3.org/ns/csvw#lineTerminators"
+    },
+    "skipInitialSpace" : {
+      "@id" : "http://www.w3.org/ns/csvw#skipInitialSpace",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "skipRows" : {
+      "@id" : "http://www.w3.org/ns/csvw#skipRows"
+    },
+    "WithComparator" : {
+      "@id" : "http://example.com/slowmo#WithComparator",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://schema.org/identifier"
+    }
+  }
+}
