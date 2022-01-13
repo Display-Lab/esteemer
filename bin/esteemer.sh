@@ -99,10 +99,11 @@ if [[ -z ${SPEK_FILE} ]]; then
   SPEK_FILE="-"
 fi
 
-# Load spek into fuseki
 FUSEKI_DATASET_URL="http://localhost:3030/ds"
 SPEK_URL="${FUSEKI_DATASET_URL}/spek"
 ENCODED_SPEK_URL=$(urlencode "${SPEK_URL}")
+
+# Load spek into fuseki
 curl --silent -X PUT --data-binary "@${SPEK_FILE}" \
   --header 'Content-type: application/ld+json' \
   "${FUSEKI_DATASET_URL}?graph=${ENCODED_SPEK_URL}" >&2
@@ -112,7 +113,7 @@ curl --silent -X POST --data-binary "${UPD_SPARQL}" \
   --header 'Content-type: application/sparql-update' \
   "${FUSEKI_DATASET_URL}/update"
 
-# get updated spek
+# get updated spek and emit to stdout.
   curl --silent -G --header 'Accept: application/ld+json' \
     --data-urlencode "graph=${SPEK_URL}" \
     "${FUSEKI_DATASET_URL}"
