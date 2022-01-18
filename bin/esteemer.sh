@@ -15,21 +15,6 @@ Options:
   -s | --spek     path to spek file (default to stdin)
 HEREDOC
 
-urlencode() {
-    # urlencode <string>
-    old_lc_collate=$LC_COLLATE
-    LC_COLLATE=C
-    local length="${#1}"
-    for (( i = 0; i < length; i++ )); do
-        local c="${1:$i:1}"
-        case $c in
-            [a-zA-Z0-9.~_-]) printf '%s' "$c" ;;
-            *) printf '%%%02X' "'$c" ;;
-        esac
-    done
-    LC_COLLATE=$old_lc_collate
-}
-
 # Parse args
 PARAMS=()
 while (("$#")); do
@@ -75,7 +60,8 @@ if [[ -z ${FUSEKI_PING}} || ${FUSEKI_PING} -ne 200 ]]; then
 fi
 
 # Define SPARQL Queries for updates and results
-read -r -d '' UPD_SPARQL <<'SPARQL'
+read -r -d '' UPD_SPARQL << \
+'SPARQL'
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX cpo: <http://example.com/cpo#>
@@ -101,19 +87,20 @@ fi
 
 FUSEKI_DATASET_URL="http://localhost:3030/ds"
 SPEK_URL="${FUSEKI_DATASET_URL}/spek"
-ENCODED_SPEK_URL=$(urlencode "${SPEK_URL}")
 
 # Load spek into fuseki
-curl --silent -X PUT --data-binary "@${SPEK_FILE}" \
+curl --silent PUT \
+  --data-binary "@${SPEK_FILE}" \
   --header 'Content-type: application/ld+json' \
-  "${FUSEKI_DATASET_URL}?graph=${ENCODED_SPEK_URL}" >&2
+  "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}" >&2
 
 # run update sparql
-curl --silent -X POST --data-binary "${UPD_SPARQL}" \
+curl --silent POST \
+  --data-binary "${UPD_SPARQL}" \
   --header 'Content-type: application/sparql-update' \
   "${FUSEKI_DATASET_URL}/update"
 
 # get updated spek and emit to stdout.
-  curl --silent -G --header 'Accept: application/ld+json' \
-    --data-urlencode "graph=${SPEK_URL}" \
-    "${FUSEKI_DATASET_URL}"
+curl --silent \
+  --header 'Accept: application/ld+json' \
+  "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}"
