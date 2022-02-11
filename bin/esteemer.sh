@@ -69,13 +69,13 @@ PREFIX slowmo: <http://example.com/slowmo#>
 
 INSERT {
   GRAPH <http://localhost:3030/ds/spek> {
-    ?candi slowmo:promoted_by <http://example.com/slowmo#default_esteemer_criteria> .
+    ?candidate slowmo:promoted_by <http://example.com/slowmo#default_esteemer_criteria> .
   }
 }
 USING <http://localhost:3030/ds/spek>
 WHERE {
-  ?candi a obo:cpo_0000053 .
-  ?candi slowmo:acceptable_by ?o
+  ?candidate a obo:cpo_0000053 .
+  ?candidate slowmo:acceptable_by ?o
 }
 SPARQL
 
