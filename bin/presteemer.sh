@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
-
 # Usage message
 read -r -d '' USE_MSG <<'HEREDOC'
 Usage:
-  esteemer.sh -h
-  esteemer.sh -p causal_pathway.json
-  esteemer.sh -s spek.json
+  presteemer.sh -h
+  presteemer.sh -s spek.json
 
-Esteemer reads a spek from stdin or provided file path.
+Presteemer reads a spek from stdin or provided file path.
 
 Options:
   -h | --help     print help and exit
-  -p | --pathways path to causal pathways
   -s | --spek     path to spek file (default to stdin)
 HEREDOC
 
@@ -22,10 +19,6 @@ while (("$#")); do
   -h | --help)
     echo "${USE_MSG}"
     exit 0
-    ;;
-  -p | --pathways)
-    CP_FILE="${2}"
-    shift 2
     ;;
   -s | --spek)
     SPEK_FILE="${2}"
@@ -59,28 +52,25 @@ if [[ -z ${FUSEKI_PING}} || ${FUSEKI_PING} -ne 200 ]]; then
   exit 1
 fi
 
-# Define SPARQL Queries for updates and results
-
-# Construct sub-graph of candidate nodes, and ancestor performer nodes (they are not connected here)
-read -r -d '' UPDATE_CANDIDATES_WITH_PROMOTED_BY << \
+read -r -d '' GET_CANDIDATES_AND_PERFORMER_GRAPH << \
 'SPARQL'
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX cpo: <http://example.com/cpo#>
 PREFIX slowmo: <http://example.com/slowmo#>
-
-INSERT {
-  GRAPH <http://localhost:3030/ds/spek> {
-    ?candidate slowmo:promoted_by <http://example.com/slowmo#default_esteemer_criteria> .
-  }
+construct {
+  ?candidate ?p ?o .
+  ?candidate obo:RO_0000091 ?disposition .
+  ?disposition ?p2 ?o2 .
+  ?performer a slowmo:AncestorPerformer
 }
-USING <http://localhost:3030/ds/spek>
+FROM <http://localhost:3030/ds/spek>
 WHERE {
   ?candidate a obo:cpo_0000053 .
-  ?candidate slowmo:acceptable_by ?o
+  ?candidate ?p ?o .
+  ?candidate obo:RO_0000091 ?disposition .
+  ?disposition ?p2 ?o2 .
+  ?candidate slowmo:AncestorPerformer ?performer .
 }
 SPARQL
-
 # Read from SPEK_FILE or pipe from stdin
 #   Use '-' to instruct curl to read from stdin
 if [[ -z ${SPEK_FILE} ]]; then
@@ -96,13 +86,8 @@ curl --silent PUT \
   --header 'Content-type: application/ld+json' \
   "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}" >&2
 
-# run update sparql
-curl --silent POST \
-  --data-binary "${UPDATE_CANDIDATES_WITH_PROMOTED_BY}" \
-  --header 'Content-type: application/sparql-update' \
-  "${FUSEKI_DATASET_URL}/update"
-
-# get updated spek and emit to stdout.
-curl --silent \
-  --header 'Accept: application/ld+json' \
-  "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}"
+# run construct performer query
+curl --silent GET \
+  --data-binary "${GET_CANDIDATES_AND_PERFORMER_GRAPH}" \
+  --header 'Content-type: application/sparql-query' \
+  "${FUSEKI_DATASET_URL}/query"
