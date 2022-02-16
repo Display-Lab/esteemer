@@ -63,18 +63,16 @@ fi
 
 # Construct sub-graph of candidate nodes, and ancestor performer nodes (they are not connected here)
 read -r -d '' UPDATE_CANDIDATES_WITH_PROMOTED_BY << \
-'SPARQL'
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+  'SPARQL'
 PREFIX obo: <http://purl.obolibrary.org/obo/>
-PREFIX cpo: <http://example.com/cpo#>
 PREFIX slowmo: <http://example.com/slowmo#>
 
 INSERT {
-  GRAPH <http://localhost:3030/ds/spek> {
+  GRAPH <http://localhost:3030/ds/espek> {
     ?candidate slowmo:promoted_by <http://example.com/slowmo#default_esteemer_criteria> .
   }
 }
-USING <http://localhost:3030/ds/spek>
+USING <http://localhost:3030/ds/espek>
 WHERE {
   ?candidate a obo:cpo_0000053 .
   ?candidate slowmo:acceptable_by ?o
@@ -88,12 +86,11 @@ if [[ -z ${SPEK_FILE} ]]; then
 fi
 
 FUSEKI_DATASET_URL="http://localhost:3030/ds"
-SPEK_URL="${FUSEKI_DATASET_URL}/spek"
-
-# Load spek into fuseki
-curl --silent PUT \
-  --data-binary "@${SPEK_FILE}" \
-  --header 'Content-type: application/ld+json' \
+SPEK_URL="${FUSEKI_DATASET_URL}/espek"
+# Load presteemer turtle spek into fuseki
+#curl --silent PUT \
+  --data-binary @${SPEK_FILE} \
+  --header 'Content-type: text/turtle' \
   "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}" >&2
 
 # run update sparql

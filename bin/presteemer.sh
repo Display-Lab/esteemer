@@ -60,15 +60,14 @@ construct {
   ?candidate ?p ?o .
   ?candidate obo:RO_0000091 ?disposition .
   ?disposition ?p2 ?o2 .
-  ?performer a slowmo:AncestorPerformer
 }
 FROM <http://localhost:3030/ds/spek>
 WHERE {
   ?candidate a obo:cpo_0000053 .
-  ?candidate ?p ?o .
-  ?candidate obo:RO_0000091 ?disposition .
-  ?disposition ?p2 ?o2 .
   ?candidate slowmo:AncestorPerformer ?performer .
+  ?candidate obo:RO_0000091 ?disposition .
+  ?candidate ?p ?o .
+  ?disposition ?p2 ?o2 .
 }
 SPARQL
 # Read from SPEK_FILE or pipe from stdin
@@ -78,7 +77,7 @@ if [[ -z ${SPEK_FILE} ]]; then
 fi
 
 FUSEKI_DATASET_URL="http://localhost:3030/ds"
-SPEK_URL="${FUSEKI_DATASET_URL}/spek"
+SPEK_URL="${FUSEKI_DATASET_URL}/espek"
 
 # Load spek into fuseki
 curl --silent PUT \
