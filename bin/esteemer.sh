@@ -88,7 +88,7 @@ fi
 FUSEKI_DATASET_URL="http://localhost:3030/ds"
 SPEK_URL="${FUSEKI_DATASET_URL}/espek"
 # Load presteemer turtle spek into fuseki
-#curl --silent PUT \
+curl --silent PUT \
   --data-binary @${SPEK_FILE} \
   --header 'Content-type: text/turtle' \
   "${FUSEKI_DATASET_URL}?graph=${SPEK_URL}" >&2
