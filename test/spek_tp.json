@@ -1,0 +1,2370 @@
+{
+    "@graph": [
+        {
+            "@id": "_:b0",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "PONV Prophylaxis: Adults (Old)",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b1"
+                },
+                {
+                    "@id": "_:b2"
+                }
+            ],
+            "identifier": "PONV01"
+        },
+        {
+            "@id": "_:b1",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b2",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b3",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "5.0E-2",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b4",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Postoperative Transfer of Care to ICU",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b5"
+                },
+                {
+                    "@id": "_:b6"
+                }
+            ],
+            "identifier": "TOC03"
+        },
+        {
+            "@id": "_:b5",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b6",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b7",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b8",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b9",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b10",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b11",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b12",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Antibiotic Timing for Cesarean Delivery",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b72"
+                },
+                {
+                    "@id": "_:b11"
+                }
+            ],
+            "identifier": "ABX01"
+        },
+        {
+            "@id": "_:b13",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b14",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b15",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "PONV Prophylaxis: Pediatrics",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b16"
+                },
+                {
+                    "@id": "_:b17"
+                }
+            ],
+            "identifier": "PONV04"
+        },
+        {
+            "@id": "_:b16",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b17",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b18",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b19",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b20",
+            "http://www.w3.org/ns/csvw#skipBlankRows": {
+                "@value": "true",
+                "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "http://www.w3.org/ns/csvw#encoding": "utf-8",
+            "http://www.w3.org/ns/csvw#delimiter": ",",
+            "http://www.w3.org/ns/csvw#skipColumns": "",
+            "http://www.w3.org/ns/csvw#headerRowCount": "1",
+            "http://www.w3.org/ns/csvw#commentPrefix": "",
+            "http://www.w3.org/ns/csvw#header": {
+                "@value": "true",
+                "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "http://www.w3.org/ns/csvw#doubleQuote": {
+                "@value": "true",
+                "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "http://www.w3.org/ns/csvw#trim": {
+                "@value": "false",
+                "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "http://www.w3.org/ns/csvw#quoteChar": "\"",
+            "http://www.w3.org/ns/csvw#lineTerminators": "\\n",
+            "http://www.w3.org/ns/csvw#skipInitialSpace": {
+                "@value": "false",
+                "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+            },
+            "http://www.w3.org/ns/csvw#skipRows": ""
+        },
+        {
+            "@id": "_:b21",
+            "@type": "obo:psdo_0000119"
+        },
+        {
+            "@id": "_:b22",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b23"
+                },
+                {
+                    "@id": "_:b24"
+                },
+                {
+                    "@id": "_:b25"
+                },
+                {
+                    "@id": "_:b26"
+                },
+                {
+                    "@id": "_:b27"
+                },
+                {
+                    "@id": "_:b28"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You reached the benchmark this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b23",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b24",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b25",
+            "@type": "obo:psdo_0000121"
+        },
+        {
+            "@id": "_:b26",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b27",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b28",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b29",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Low Fresh Gas Flow",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b30"
+                },
+                {
+                    "@id": "_:b31"
+                }
+            ],
+            "identifier": "SUS01"
+        },
+        {
+            "@id": "_:b30",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b31",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b32",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "30 Day Post-Op In-Hospital Mortality Rate",
+            "slowmo:WithComparator": {
+                "@id": "_:b33"
+            },
+            "identifier": "MORT01"
+        },
+        {
+            "@id": "_:b33",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b34",
+            "@type": "obo:psdo_0000119"
+        },
+        {
+            "@id": "_:b35",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b36",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b37",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b38",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b39",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b40",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b41",
+            "slowmo:ColumnUse": "time",
+            "http://www.w3.org/ns/csvw#datatype": "date",
+            "http://www.w3.org/ns/csvw#title": "Month",
+            "http://www.w3.org/ns/csvw#name": "Month",
+            "http://purl.org/dc/terms/description": "Performance calendar month."
+        },
+        {
+            "@id": "_:b42",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b43",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Low Map Prevention < 65",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b19"
+                },
+                {
+                    "@id": "_:b44"
+                }
+            ],
+            "identifier": "BP03"
+        },
+        {
+            "@id": "_:b44",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b45",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b46"
+                },
+                {
+                    "@id": "_:b47"
+                },
+                {
+                    "@id": "_:b48"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is getting worse for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b46",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b47",
+            "@type": "obo:psdo_0000119"
+        },
+        {
+            "@id": "_:b48",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b49",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b50",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b51",
+            "http://www.w3.org/ns/csvw#columns": [
+                {
+                    "@id": "_:b41"
+                },
+                {
+                    "@id": "_:b52"
+                },
+                {
+                    "@id": "_:b53"
+                },
+                {
+                    "@id": "_:b54"
+                },
+                {
+                    "@id": "_:b55"
+                }
+            ]
+        },
+        {
+            "@id": "_:b52",
+            "slowmo:ColumnUse": "denominator",
+            "http://www.w3.org/ns/csvw#datatype": "integer",
+            "http://www.w3.org/ns/csvw#title": "Count of Non-Excluded Cases",
+            "http://www.w3.org/ns/csvw#name": "Denominator",
+            "http://purl.org/dc/terms/description": "Count of non-excluded cases."
+        },
+        {
+            "@id": "_:b53",
+            "slowmo:ColumnUse": "measure",
+            "http://www.w3.org/ns/csvw#datatype": "string",
+            "http://www.w3.org/ns/csvw#title": "Measure",
+            "http://www.w3.org/ns/csvw#name": "Measure_Name",
+            "http://purl.org/dc/terms/description": "Name of measurement"
+        },
+        {
+            "@id": "_:b54",
+            "slowmo:ColumnUse": "numerator",
+            "http://www.w3.org/ns/csvw#datatype": "integer",
+            "http://www.w3.org/ns/csvw#title": "Count of Passed Cases",
+            "http://www.w3.org/ns/csvw#name": "Passed_Count",
+            "http://purl.org/dc/terms/description": "Count of cases that passed measurement criteria."
+        },
+        {
+            "@id": "_:b55",
+            "slowmo:ColumnUse": "identifier",
+            "http://www.w3.org/ns/csvw#datatype": "string",
+            "http://www.w3.org/ns/csvw#title": "Staff ID",
+            "http://www.w3.org/ns/csvw#name": "Staff_Number",
+            "http://purl.org/dc/terms/description": "Staff identification number"
+        },
+        {
+            "@id": "_:b56",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b57",
+            "@type": "obo:psdo_0000121"
+        },
+        {
+            "@id": "_:b58",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b59",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b60",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b61",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b62",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Myocardial Infarction, High Risk Patients",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b63"
+                },
+                {
+                    "@id": "_:b64"
+                }
+            ],
+            "identifier": "CARD03"
+        },
+        {
+            "@id": "_:b63",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "5.0E-2",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b64",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b65",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b34"
+                },
+                {
+                    "@id": "_:b61"
+                },
+                {
+                    "@id": "_:b66"
+                },
+                {
+                    "@id": "_:b67"
+                },
+                {
+                    "@id": "_:b68"
+                },
+                {
+                    "@id": "_:b69"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance dropped below the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b66",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b67",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b68",
+            "@type": "obo:psdo_0000122"
+        },
+        {
+            "@id": "_:b69",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b70",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b71",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b72",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b73",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b74",
+            "@type": "http://www.w3.org/ns/csvw#Table",
+            "http://purl.org/dc/terms/title": "Case Counts",
+            "http://www.w3.org/ns/csvw#tableSchema": {
+                "@id": "_:b51"
+            },
+            "http://www.w3.org/ns/csvw#dialect": {
+                "@id": "_:b20"
+            }
+        },
+        {
+            "@id": "_:b75",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "General Anesthesia During Cesarean Deliveries",
+            "slowmo:WithComparator": {
+                "@id": "_:b73"
+            },
+            "identifier": "GA01"
+        },
+        {
+            "@id": "_:b76",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b77",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Low Glucose Treated, Intraop",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b78"
+                },
+                {
+                    "@id": "_:b79"
+                }
+            ],
+            "identifier": "GLU02"
+        },
+        {
+            "@id": "_:b78",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b79",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b80",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b81"
+                },
+                {
+                    "@id": "_:b82"
+                },
+                {
+                    "@id": "_:b83"
+                },
+                {
+                    "@id": "_:b84"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You are a top performer this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b81",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b82",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b83",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b84",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b85",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "PONV Prophylaxis (Old): Pediatrics",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b70"
+                },
+                {
+                    "@id": "_:b86"
+                }
+            ],
+            "identifier": "PONV02"
+        },
+        {
+            "@id": "_:b86",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b87",
+            "@type": "obo:psdo_0000122"
+        },
+        {
+            "@id": "_:b88",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "General anesthesia after neuraxial in Cesarean Deliveries",
+            "slowmo:WithComparator": {
+                "@id": "_:b89"
+            },
+            "identifier": "GA02"
+        },
+        {
+            "@id": "_:b89",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b90",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b91"
+                },
+                {
+                    "@id": "_:b92"
+                }
+            ],
+            "@type": "obo:psdo_0000085"
+        },
+        {
+            "@id": "_:b91",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b92",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b93",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b94",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b95",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b96"
+                },
+                {
+                    "@id": "_:b97"
+                },
+                {
+                    "@id": "_:b98"
+                },
+                {
+                    "@id": "_:b99"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is above the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b96",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b97",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b98",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b99",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b100",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b101",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b102",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b35"
+                },
+                {
+                    "@id": "_:b103"
+                },
+                {
+                    "@id": "_:b104"
+                },
+                {
+                    "@id": "_:b105"
+                },
+                {
+                    "@id": "_:b106"
+                },
+                {
+                    "@id": "_:b107"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You reached the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b103",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b104",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b105",
+            "@type": "obo:psdo_0000121"
+        },
+        {
+            "@id": "_:b106",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b107",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b108",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Thermoregulation Vigilance - Active Warming",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b109"
+                },
+                {
+                    "@id": "_:b110"
+                }
+            ],
+            "identifier": "TEMP01"
+        },
+        {
+            "@id": "_:b109",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b110",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b111",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b112",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b113",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b114",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b115",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b116",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b117",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Train of Four Taken",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b94"
+                },
+                {
+                    "@id": "_:b118"
+                }
+            ],
+            "identifier": "NMB01"
+        },
+        {
+            "@id": "_:b118",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b119",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b120",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "SBP < 90 in Cesarean Deliveries",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b121"
+                },
+                {
+                    "@id": "_:b122"
+                }
+            ],
+            "identifier": "BP04"
+        },
+        {
+            "@id": "_:b121",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b122",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b123",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b124"
+                },
+                {
+                    "@id": "_:b125"
+                },
+                {
+                    "@id": "_:b126"
+                },
+                {
+                    "@id": "_:b127"
+                },
+                {
+                    "@id": "_:b128"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is approaching the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b124",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b125",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b126",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b127",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b128",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b129",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b130",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b131",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b132",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Hypothermia Avoidance in Cardiac Surgery",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b133"
+                },
+                {
+                    "@id": "_:b134"
+                }
+            ],
+            "identifier": "TEMP06"
+        },
+        {
+            "@id": "_:b133",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b134",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b135",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b136",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Minimizing Colloid Use (Cardiac)",
+            "slowmo:WithComparator": {
+                "@id": "_:b130"
+            },
+            "identifier": "FLUID01C"
+        },
+        {
+            "@id": "_:b137",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Multimodal Analgesia",
+            "slowmo:WithComparator": {
+                "@id": "_:b138"
+            },
+            "identifier": "PAIN02"
+        },
+        {
+            "@id": "_:b138",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b139",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b140",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b141",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b142",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b40"
+                },
+                {
+                    "@id": "_:b71"
+                },
+                {
+                    "@id": "_:b143"
+                },
+                {
+                    "@id": "_:b144"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You are a top performer this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b143",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b144",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b145",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Thermoregulation Monitoring - Core Temperature",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b146"
+                },
+                {
+                    "@id": "_:b147"
+                }
+            ],
+            "identifier": "TEMP02"
+        },
+        {
+            "@id": "_:b146",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b147",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b148",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b149",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b150",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b151",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b152",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b153",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b154",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Reversal Administered",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b152"
+                },
+                {
+                    "@id": "_:b155"
+                }
+            ],
+            "identifier": "NMB02"
+        },
+        {
+            "@id": "_:b155",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b156",
+            "addressRegion": "MI",
+            "streetAddress": "DLHS, 1161 NIB, 300 N Ingalls St.",
+            "@type": "PostalAddress",
+            "postalCode": "48109",
+            "name": "DisplayLab",
+            "addressCountry": "USA"
+        },
+        {
+            "@id": "_:b157",
+            "@type": "obo:psdo_0000045"
+        },
+        {
+            "@id": "_:b158",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Perioperative Hypothermia",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b8"
+                },
+                {
+                    "@id": "_:b135"
+                }
+            ],
+            "identifier": "TEMP03"
+        },
+        {
+            "@id": "_:b159",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b160",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b161",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Myocardial Infarction",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b3"
+                },
+                {
+                    "@id": "_:b162"
+                }
+            ],
+            "identifier": "CARD02"
+        },
+        {
+            "@id": "_:b162",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b163",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b164",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b165",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "5.0E-2",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b166",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "High Glucose Treated, Periop",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b129"
+                },
+                {
+                    "@id": "_:b167"
+                }
+            ],
+            "identifier": "GLU03"
+        },
+        {
+            "@id": "_:b167",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b168",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "PONV Prophylaxis: Adults",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b56"
+                },
+                {
+                    "@id": "_:b150"
+                }
+            ],
+            "identifier": "PONV05"
+        },
+        {
+            "@id": "_:b169",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Minimizing Colloid Use (Non-Cardiac)",
+            "slowmo:WithComparator": {
+                "@id": "_:b170"
+            },
+            "identifier": "FLUID01NC"
+        },
+        {
+            "@id": "_:b170",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b171",
+            "@type": "obo:psdo_0000121"
+        },
+        {
+            "@id": "_:b172",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b173",
+            "@type": "obo:psdo_0000119"
+        },
+        {
+            "@id": "_:b174",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Administration of PEEP",
+            "slowmo:WithComparator": {
+                "@id": "_:b36"
+            },
+            "identifier": "PUL03"
+        },
+        {
+            "@id": "_:b175",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b176",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Protective Tidal Volume, 8 mL/kg PBW",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b119"
+                },
+                {
+                    "@id": "_:b153"
+                }
+            ],
+            "identifier": "PUL02"
+        },
+        {
+            "@id": "_:b177",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "1.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b178",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b179",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Avoiding Medication Overdose",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b164"
+                },
+                {
+                    "@id": "_:b165"
+                }
+            ],
+            "identifier": "MED01"
+        },
+        {
+            "@id": "_:b180",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Avoiding Monitoring Gaps",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b13"
+                },
+                {
+                    "@id": "_:b181"
+                }
+            ],
+            "identifier": "BP02"
+        },
+        {
+            "@id": "_:b181",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b182",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b7"
+                },
+                {
+                    "@id": "_:b49"
+                },
+                {
+                    "@id": "_:b57"
+                },
+                {
+                    "@id": "_:b112"
+                },
+                {
+                    "@id": "_:b148"
+                },
+                {
+                    "@id": "_:b183"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You reached the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b183",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b184",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b59"
+                },
+                {
+                    "@id": "_:b185"
+                },
+                {
+                    "@id": "_:b186"
+                },
+                {
+                    "@id": "_:b187"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is above the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b185",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b186",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b187",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b188",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b189",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b101"
+                },
+                {
+                    "@id": "_:b190"
+                },
+                {
+                    "@id": "_:b191"
+                },
+                {
+                    "@id": "_:b192"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You are not a top performer this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b190",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b11"
+            },
+            "@type": "obo:psdo_0000095",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b191",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b192",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b193",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Low Glucose Treated, Periop",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b14"
+                },
+                {
+                    "@id": "_:b76"
+                }
+            ],
+            "identifier": "GLU04"
+        },
+        {
+            "@id": "_:b194",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b195",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Transfusion Management Vigilance",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b163"
+                },
+                {
+                    "@id": "_:b188"
+                }
+            ],
+            "identifier": "TRAN01"
+        },
+        {
+            "@id": "_:b196",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Overtransfusion",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b42"
+                },
+                {
+                    "@id": "_:b111"
+                }
+            ],
+            "identifier": "TRAN02"
+        },
+        {
+            "@id": "_:b197",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b198",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Postoperative Nausea or Vomiting Outcome",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b39"
+                },
+                {
+                    "@id": "_:b177"
+                }
+            ],
+            "identifier": "PONV03"
+        },
+        {
+            "@id": "_:b199",
+            "@type": "Organization",
+            "address": {
+                "@id": "_:b156"
+            }
+        },
+        {
+            "@id": "_:b200",
+            "slowmo:RegardingComparator": {
+                "@id": "_:b72"
+            },
+            "@type": "obo:psdo_0000094",
+            "slowmo:RegardingMeasure": {
+                "@id": "_:b12"
+            }
+        },
+        {
+            "@id": "_:b201",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b202",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Postoperative Transfer of Care to PACU",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b203"
+                },
+                {
+                    "@id": "_:b204"
+                }
+            ],
+            "identifier": "TOC02"
+        },
+        {
+            "@id": "_:b203",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b204",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        },
+        {
+            "@id": "_:b205",
+            "@type": "obo:psdo_0000116"
+        },
+        {
+            "@id": "_:b206",
+            "@type": "obo:psdo_0000117"
+        },
+        {
+            "@id": "_:b207",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Intraoperative Transfer of Care",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b9"
+                },
+                {
+                    "@id": "_:b38"
+                }
+            ],
+            "identifier": "TOC01"
+        },
+        {
+            "@id": "_:b208",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b209",
+            "@type": "obo:psdo_0000120"
+        },
+        {
+            "@id": "_:b210",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Acute Kidney Injury",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b159"
+                },
+                {
+                    "@id": "_:b172"
+                }
+            ],
+            "identifier": "AKI01"
+        },
+        {
+            "@id": "_:b211",
+            "@type": "obo:psdo_0000041"
+        },
+        {
+            "@id": "_:b212",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Low MAP Prevention < 55",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b58"
+                },
+                {
+                    "@id": "_:b131"
+                }
+            ],
+            "identifier": "BP01"
+        },
+        {
+            "@id": "_:b213",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b100"
+                },
+                {
+                    "@id": "_:b205"
+                },
+                {
+                    "@id": "_:b209"
+                },
+                {
+                    "@id": "_:b211"
+                },
+                {
+                    "@id": "_:b214"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is approaching the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b214",
+            "@type": "obo:psdo_0000046"
+        },
+        {
+            "@id": "_:b215",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b140"
+                },
+                {
+                    "@id": "_:b194"
+                },
+                {
+                    "@id": "_:b200"
+                },
+                {
+                    "@id": "_:b201"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You are not a top performer this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b216",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b141"
+                },
+                {
+                    "@id": "_:b149"
+                },
+                {
+                    "@id": "_:b157"
+                },
+                {
+                    "@id": "_:b171"
+                },
+                {
+                    "@id": "_:b178"
+                },
+                {
+                    "@id": "_:b206"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "You reached the benchmark this month for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b217",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Postoperative Nausea or Vomiting Outcome",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b18"
+                },
+                {
+                    "@id": "_:b37"
+                }
+            ],
+            "identifier": "PONV03b"
+        },
+        {
+            "@id": "_:b218",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "http://example.com/app#display-lab",
+            "slowmo:IsAboutMeasure": [
+                {
+                    "@id": "_:b0"
+                },
+                {
+                    "@id": "_:b4"
+                },
+                {
+                    "@id": "_:b15"
+                },
+                {
+                    "@id": "_:b29"
+                },
+                {
+                    "@id": "_:b32"
+                },
+                {
+                    "@id": "_:b43"
+                },
+                {
+                    "@id": "_:b62"
+                },
+                {
+                    "@id": "_:b75"
+                },
+                {
+                    "@id": "_:b77"
+                },
+                {
+                    "@id": "_:b85"
+                },
+                {
+                    "@id": "_:b88"
+                },
+                {
+                    "@id": "_:b108"
+                },
+                {
+                    "@id": "_:b117"
+                },
+                {
+                    "@id": "_:b120"
+                },
+                {
+                    "@id": "_:b132"
+                },
+                {
+                    "@id": "_:b136"
+                },
+                {
+                    "@id": "_:b137"
+                },
+                {
+                    "@id": "_:b145"
+                },
+                {
+                    "@id": "_:b154"
+                },
+                {
+                    "@id": "_:b158"
+                },
+                {
+                    "@id": "_:b161"
+                },
+                {
+                    "@id": "_:b166"
+                },
+                {
+                    "@id": "_:b168"
+                },
+                {
+                    "@id": "_:b169"
+                },
+                {
+                    "@id": "_:b174"
+                },
+                {
+                    "@id": "_:b176"
+                },
+                {
+                    "@id": "_:b179"
+                },
+                {
+                    "@id": "_:b180"
+                },
+                {
+                    "@id": "_:b193"
+                },
+                {
+                    "@id": "_:b195"
+                },
+                {
+                    "@id": "_:b196"
+                },
+                {
+                    "@id": "_:b198"
+                },
+                {
+                    "@id": "_:b12"
+                },
+                {
+                    "@id": "_:b202"
+                },
+                {
+                    "@id": "_:b207"
+                },
+                {
+                    "@id": "_:b210"
+                },
+                {
+                    "@id": "_:b212"
+                },
+                {
+                    "@id": "_:b217"
+                },
+                {
+                    "@id": "_:b219"
+                },
+                {
+                    "@id": "_:b220"
+                },
+                {
+                    "@id": "_:b221"
+                },
+                {
+                    "@id": "_:b222"
+                },
+                {
+                    "@id": "_:b223"
+                },
+                {
+                    "@id": "_:b224"
+                }
+            ],
+            "slowmo:IsAboutOrganization": {
+                "@id": "_:b199"
+            },
+            "@type": "slowmo:spek",
+            "slowmo:InputTable": {
+                "@id": "_:b74"
+            },
+            "slowmo:IsAboutPerformer": {
+                "@id": "_:b90"
+            },
+            "slowmo:IsAboutTemplate": [
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#WorseSocialBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#BetterGoalBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#LostGoalBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar"
+                },
+                {
+                    "@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar"
+                }
+            ],
+            "slowmo:HasCandidate": [
+                {
+                    "@id": "_:b22"
+                },
+                {
+                    "@id": "_:b45"
+                },
+                {
+                    "@id": "_:b65"
+                },
+                {
+                    "@id": "_:b80"
+                },
+                {
+                    "@id": "_:b95"
+                },
+                {
+                    "@id": "_:b102"
+                },
+                {
+                    "@id": "_:b123"
+                },
+                {
+                    "@id": "_:b142"
+                },
+                {
+                    "@id": "_:b182"
+                },
+                {
+                    "@id": "_:b184"
+                },
+                {
+                    "@id": "_:b189"
+                },
+                {
+                    "@id": "_:b213"
+                },
+                {
+                    "@id": "_:b215"
+                },
+                {
+                    "@id": "_:b216"
+                },
+                {
+                    "@id": "_:b225"
+                },
+                {
+                    "@id": "_:b226"
+                }
+            ]
+        },
+        {
+            "@id": "_:b219",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Pediatric Temperature Management",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b60"
+                },
+                {
+                    "@id": "_:b113"
+                }
+            ],
+            "identifier": "TEMP04"
+        },
+        {
+            "@id": "_:b220",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Hypothermia in Cesarean Deliveries",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b50"
+                },
+                {
+                    "@id": "_:b175"
+                }
+            ],
+            "identifier": "TEMP05"
+        },
+        {
+            "@id": "_:b221",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Escalated High Glucose Treated",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b114"
+                },
+                {
+                    "@id": "_:b160"
+                }
+            ],
+            "identifier": "GLU05"
+        },
+        {
+            "@id": "_:b222",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Protective Tidal Volume, 10 mL/kg PBW",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b139"
+                },
+                {
+                    "@id": "_:b227"
+                }
+            ],
+            "identifier": "PUL01"
+        },
+        {
+            "@id": "_:b223",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "Multimodal Analgesia, Pediatrics",
+            "slowmo:WithComparator": {
+                "@id": "_:b115"
+            },
+            "identifier": "PAIN01"
+        },
+        {
+            "@id": "_:b224",
+            "@type": "obo:psdo_0000102",
+            "http://purl.org/dc/terms/title": "High Glucose Treated, Intraop",
+            "slowmo:WithComparator": [
+                {
+                    "@id": "_:b218"
+                },
+                {
+                    "@id": "_:b228"
+                }
+            ],
+            "identifier": "GLU01"
+        },
+        {
+            "@id": "_:b225",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b93"
+                },
+                {
+                    "@id": "_:b116"
+                },
+                {
+                    "@id": "_:b173"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance is getting worse for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b226",
+            "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
+            "slowmo:AncestorPerformer": "_:p1",
+            "obo:RO_0000091": [
+                {
+                    "@id": "_:b10"
+                },
+                {
+                    "@id": "_:b21"
+                },
+                {
+                    "@id": "_:b87"
+                },
+                {
+                    "@id": "_:b151"
+                },
+                {
+                    "@id": "_:b197"
+                },
+                {
+                    "@id": "_:b208"
+                }
+            ],
+            "@type": "obo:cpo_0000053",
+            "psdo:PerformanceSummaryTextualEntity": "Your performance dropped below the goal for the measure [measure_details]"
+        },
+        {
+            "@id": "_:b227",
+            "@type": "obo:psdo_0000094",
+            "http://purl.org/dc/terms/title": "GOAL",
+            "name": "goal",
+            "slowmo:ComparisonValue": {
+                "@value": "9.0E-1",
+                "@type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        },
+        {
+            "@id": "_:b228",
+            "@type": "obo:psdo_0000095",
+            "http://purl.org/dc/terms/title": "PEERS",
+            "name": "peers"
+        }
+    ],
+    "@context": {
+        "slowmo": "http://example.com/slowmo#",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "@vocab": "http://schema.org/"
+    }
+}
