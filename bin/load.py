@@ -40,8 +40,7 @@ def read(file):
 def transform (contenders_graph):
     contenders_graph.bind("obo",'http://purl.obolibrary.org/obo/')
     contenders_graph.bind("slowmo",'http://example.com/slowmo#')
-    # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
-    #print(contenders_graph.serialize(format="ttl"))
+
 
     #start implementation of esteemer algorithm
     contender_messages_df=to_dataframe(contenders_graph)
@@ -73,15 +72,6 @@ def transform (contenders_graph):
                         RegardingComparator.append(a['slowmo:RegardingComparator{BNode}'][0])
                         RegardingMeasure.append(a['slowmo:RegardingMeasure{BNode}'][0])
                         b=b+1
-                #RegardingComparator1 = list(set(RegardingComparator))
-
-    #print(' '.join(map(str, disposition)))
-    #print(' '.join(map(str, RegardingComparator)))
-    #print(' '.join(map(str, RegardingMeasure)))
-    #print(' '.join(map(str, values)))
-    #print(len(values))
-    #print(meaningful_messages_df.shape)
-
     meaningful_messages_df["RegardingComparator"] = RegardingComparator
     meaningful_messages_df["RegardingMeasure"] = RegardingMeasure
     meaningful_messages_df["disposition"]=disposition

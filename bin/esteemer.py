@@ -16,11 +16,17 @@ from score import score , select
 
 warnings.filterwarnings("ignore")
 # TODO: process command line args if using graph_from_file()
+# Read graph and convert to dataframe
 contenders_graph=read(sys.argv[1])
+# contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
+#print(contenders_graph.serialize(format="ttl"))
+# Transform dataframe to more meaningful dataframe
 meaningful_messages_final = transform(contenders_graph)
+# assign score for each of meaningful_messages
 meaningful_messages_final = score(meaningful_messages_final)
+#select maximum of the meaningful_messages
 finalData = select(meaningful_messages_final )
-#contenders_graph=graph_from_file(sys.argv[1])
+
 print(finalData)
 with open('data.json', 'a') as f:
     f.write(finalData + '\n')
