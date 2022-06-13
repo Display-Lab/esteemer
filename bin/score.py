@@ -10,7 +10,6 @@ import random
 import pandas as pd
 import sys
 import warnings
-import transform
 import json
 from load import read ,transform
 warnings.filterwarnings("ignore")

@@ -10,7 +10,6 @@ import random
 import pandas as pd
 import sys
 import warnings
-import transform
 import json
 warnings.filterwarnings("ignore")
 
@@ -51,6 +50,7 @@ def transform (contenders_graph):
 
 
     reference_df = contender_messages_df.filter(['id','rdf:type{URIRef}','slowmo:RegardingComparator{BNode}','slowmo:RegardingMeasure{BNode}'], axis=1)
+
     meaningful_messages_df =contender_messages_df[contender_messages_df['slowmo:AncestorPerformer{Literal}'].notna()]
     reference_df1 =reference_df.dropna()
 
