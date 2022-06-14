@@ -1,4 +1,6 @@
 import warnings
+import time
+import logging
 
 import pandas as pd
 from rdflib import Graph, Literal, Namespace, URIRef
@@ -12,8 +14,11 @@ warnings.filterwarnings("ignore")
 
 
 def read(file):
+    start_time = time.time()
     g = Graph()
     g.parse(file)
+    logging.critical(" reading graph--- %s seconds ---" % (time.time() - start_time)) 
+    start_time = time.time()
     qres = g.query(
         """
     PREFIX obo: <http://purl.obolibrary.org/obo/>
@@ -34,10 +39,12 @@ def read(file):
     }
     """
     )
+    logging.critical(" querying graph--- %s seconds ---" % (time.time() - start_time)) 
     return qres.graph
 
 
 def transform(contenders_graph):
+    start_time = time.time()
     contenders_graph.bind("obo", "http://purl.obolibrary.org/obo/")
     contenders_graph.bind("slowmo", "http://example.com/slowmo#")
 
@@ -116,7 +123,7 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
-
+    logging.critical("transforming--- %s seconds ---" % (time.time() - start_time)) 
     return meaningful_messages_final
 
 
