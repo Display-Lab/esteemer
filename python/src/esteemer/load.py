@@ -27,7 +27,12 @@ def read(file):
     ?candidate ?p ?o .
     ?candidate obo:RO_0000091 ?disposition .
     ?disposition ?p2 ?o2 .
+    ?disposition slowmo:RegardingComparator ?comparator .
+    ?disposition slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
+    ?comparator ?p4 ?o4 .
+    ?measure ?p5 ?o5 .
+   
     }
     WHERE {
     ?candidate a obo:cpo_0000053 .
@@ -35,7 +40,11 @@ def read(file):
     ?candidate obo:RO_0000091 ?disposition .
     ?candidate ?p ?o .
     ?disposition ?p2 ?o2 .
+    ?disposition slowmo:RegardingComparator ?comparator .
+    ?disposition slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
+    ?comparator ?p4 ?o4 .
+    ?measure ?p5 ?o5 .
     }
     """
     )
@@ -52,7 +61,7 @@ def transform(contenders_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    # contender_messages_df.to_csv("df_es.csv")
+    contender_messages_df.to_csv("df_es.csv")
     column_values = [
         "obo:RO_0000091{BNode}[0]",
         "obo:RO_0000091{BNode}[1]",
