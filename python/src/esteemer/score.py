@@ -19,6 +19,7 @@ def score(meaningful_messages_final):
     score = random.sample(range(10, 1000), len)
     meaningful_messages_final["score"] = score
     meaningful_messages_final.reset_index(drop=True, inplace=True)
+    #meaningful_messages_final.to_csv("df_es1.csv")
     return meaningful_messages_final
     # meaningful_messages_final.to_csv("df_es1.csv")
 

@@ -29,9 +29,11 @@ def read(file):
     ?disposition ?p2 ?o2 .
     ?disposition slowmo:RegardingComparator ?comparator .
     ?disposition slowmo:RegardingMeasure ?measure .
+   
     ?candidate slowmo:acceptable_by ?o3 .
     ?comparator ?p4 ?o4 .
     ?measure ?p5 ?o5 .
+    
    
     }
     WHERE {
@@ -42,9 +44,11 @@ def read(file):
     ?disposition ?p2 ?o2 .
     ?disposition slowmo:RegardingComparator ?comparator .
     ?disposition slowmo:RegardingMeasure ?measure .
+    
     ?candidate slowmo:acceptable_by ?o3 .
     ?comparator ?p4 ?o4 .
     ?measure ?p5 ?o5 .
+  
     }
     """
     )
@@ -61,7 +65,9 @@ def transform(contenders_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    contender_messages_df.to_csv("df_es.csv")
+    #contender_messages_df.to_csv("df_es.csv")
+    #meaningful_messages_final = contender_messages_df
+
     column_values = [
         "obo:RO_0000091{BNode}[0]",
         "obo:RO_0000091{BNode}[1]",
@@ -75,6 +81,12 @@ def transform(contenders_graph):
         "obo:RO_0000091{BNode}[9]",
         "obo:RO_0000091{BNode}[10]",
     ]
+    column_values1 =[
+      "RegardingComparator",
+    ]
+    column_values2 =[
+      "RegardingMeasure",
+    ]
 
     reference_df = contender_messages_df.filter(
         [
@@ -85,6 +97,21 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
+    reference_df2 = contender_messages_df.filter(
+        [
+            "id",
+            "rdf:type{URIRef}",
+            "slowmo:WithComparator{BNode}[0]",
+            "slowmo:WithComparator{BNode}[1]",
+            "dcterms:title{Literal}",
+            "http://schema.org/identifier{Literal}",
+            "slowmo:ComparisonValue{Literal}(xsd:double)",
+            "http://schema.org/name{Literal}"
+        ],
+        axis=1,
+    )
+   
+    #reference_df2.to_csv("referencetable1.csv")
 
     meaningful_messages_df = contender_messages_df[
         contender_messages_df["slowmo:AncestorPerformer{Literal}"].notna()
@@ -113,9 +140,11 @@ def transform(contenders_graph):
                         b = b + 1
     meaningful_messages_df["RegardingComparator"] = RegardingComparator
     meaningful_messages_df["RegardingMeasure"] = RegardingMeasure
+
+
     meaningful_messages_df["disposition"] = disposition
     meaningful_messages_df["reference_values"] = values
-    meaningful_messages_final = meaningful_messages_df.filter(
+    intermediate_messages_final = meaningful_messages_df.filter(
         [
             "id",
             "slowmo:AncestorPerformer{Literal}",
@@ -132,7 +161,78 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
-    logging.critical("transforming--- %s seconds ---" % (time.time() - start_time)) 
+    
+    with_comparator_0 =[]
+    with_comparator_1 =[]
+    title=[]
+    identifier_1=[]
+    comparison_value =[]
+    name=[]
+    for rowIndex, row in intermediate_messages_final.iterrows():  # iterate over rows
+      for columnIndex, value in row.items():
+        if columnIndex in column_values1:
+          a = reference_df2.loc[reference_df2["id"] == value]
+          if not a.empty:
+            a.reset_index(drop=True, inplace=True)
+            #with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
+            #with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
+            #title.append(a["dcterms:title{Literal}"][0])
+            #identifier_1.append(a["http://schema.org/identifier{Literal}"][0])
+            comparison_value.append(a["slowmo:ComparisonValue{Literal}(xsd:double)"][0])
+            name.append(a["http://schema.org/name{Literal}"][0])
+            
+    #intermediate_messages_final["with_comparator_0"] = with_comparator_0
+    #intermediate_messages_final["with_comparator_1"] = with_comparator_1
+    #intermediate_messages_final["title"] = title
+    #intermediate_messages_final["Measure Name"] = identifier_1
+    intermediate_messages_final["comparison value"] = comparison_value
+    intermediate_messages_final["name"]=name
+
+    #meaningful_messages_df["disposition"] = disposition
+    #meaningful_messages_df["reference_values"] = values
+    for rowIndex, row in intermediate_messages_final.iterrows():  # iterate over rows
+      for columnIndex, value in row.items():
+        if columnIndex in column_values2:
+          a = reference_df2.loc[reference_df2["id"] == value]
+          if not a.empty:
+            a.reset_index(drop=True, inplace=True)
+            with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
+            with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
+            title.append(a["dcterms:title{Literal}"][0])
+            identifier_1.append(a["http://schema.org/identifier{Literal}"][0])
+            #comparison_value.append(a["slowmo:ComparisonValue{Literal}(xsd:double)"][0])
+            #name.append(a["http://schema.org/name{Literal}"][0])
+            
+    intermediate_messages_final["with_comparator_0"] = with_comparator_0
+    intermediate_messages_final["with_comparator_1"] = with_comparator_1
+    intermediate_messages_final["title"] = title
+    intermediate_messages_final["Measure Name"] = identifier_1
+    #intermediate_messages_final["comparison value"] = comparison_value
+    #intermediate_messages_final["name"]=name
+           
+    intermediate_messages_final.to_csv("intermediate.csv")
+     
+    meaningful_messages_final = intermediate_messages_final.filter(
+        [
+            "id",
+            "slowmo:AncestorPerformer{Literal}",
+            "slowmo:AncestorTemplate{Literal}",
+            "disposition",
+            "reference_values",
+            "psdo:PerformanceSummaryDisplay{Literal}",
+            "psdo:PerformanceSummaryTextualEntity{Literal}",
+            "slowmo:acceptable_by{URIRef}[0]",
+            "slowmo:acceptable_by{URIRef}[1]",
+            "comparison value",
+            "name",
+            "title",
+            "Measure Name"
+
+        ],
+        axis=1,
+    )
+    #meaningful_messages_final.to_csv("final_list.csv")
+    logging.critical("transforming--- %s seconds ---" % (time.time() - start_time))
     return meaningful_messages_final
 
 

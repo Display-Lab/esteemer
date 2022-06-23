@@ -23,6 +23,7 @@ warnings.filterwarnings("ignore")
 # Read graph and convert to dataframe
 start_time = time.time()
 contenders_graph = read(sys.argv[1])
+
 # print(contenders_graph)
 # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
 # print(contenders_graph.serialize(format="ttl"))
