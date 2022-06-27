@@ -25,30 +25,21 @@ def read(file):
     PREFIX slowmo: <http://example.com/slowmo#>
     construct {
     ?candidate ?p ?o .
-    ?candidate obo:RO_0000091 ?disposition .
-    ?disposition ?p2 ?o2 .
-    ?disposition slowmo:RegardingComparator ?comparator .
-    ?disposition slowmo:RegardingMeasure ?measure .
-   
+    ?candidate obo:RO_0000091 ?o2 .
+    ?o2 slowmo:RegardingComparator ?comparator .
+    ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
     ?comparator ?p4 ?o4 .
-    ?measure ?p5 ?o5 .
-    
-   
-    }
+    ?measure ?p5 ?o5 . 
+    } 
     WHERE {
-    ?candidate a obo:cpo_0000053 .
-    ?candidate slowmo:AncestorPerformer ?performer .
-    ?candidate obo:RO_0000091 ?disposition .
     ?candidate ?p ?o .
-    ?disposition ?p2 ?o2 .
-    ?disposition slowmo:RegardingComparator ?comparator .
-    ?disposition slowmo:RegardingMeasure ?measure .
-    
+    ?candidate obo:RO_0000091 ?o2 .
+    ?o2 slowmo:RegardingComparator ?comparator .
+    ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
     ?comparator ?p4 ?o4 .
     ?measure ?p5 ?o5 .
-  
     }
     """
     )
@@ -65,8 +56,8 @@ def transform(contenders_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    #contender_messages_df.to_csv("df_es.csv")
-    #meaningful_messages_final = contender_messages_df
+    contender_messages_df.to_csv("df_es.csv")
+    meaningful_messages_final = contender_messages_df
 
     column_values = [
         "obo:RO_0000091{BNode}[0]",
@@ -111,13 +102,13 @@ def transform(contenders_graph):
         axis=1,
     )
    
-    #reference_df2.to_csv("referencetable1.csv")
+    
 
     meaningful_messages_df = contender_messages_df[
         contender_messages_df["slowmo:AncestorPerformer{Literal}"].notna()
     ]
-    reference_df1 = reference_df.dropna()
-
+    #reference_df1 = reference_df.dropna()
+    reference_df1 = reference_df
     RegardingComparator = []
     RegardingMeasure = []
     disposition = []
@@ -217,8 +208,9 @@ def transform(contenders_graph):
             "id",
             "slowmo:AncestorPerformer{Literal}",
             "slowmo:AncestorTemplate{Literal}",
-           # "disposition",
-           # "reference_values",
+            "disposition",
+            "reference_values",
+            "rdf:type{URIRef}",
             "psdo:PerformanceSummaryDisplay{Literal}",
             "psdo:PerformanceSummaryTextualEntity{Literal}",
             "slowmo:acceptable_by{URIRef}[0]",
@@ -231,7 +223,7 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
-    #meaningful_messages_final.to_csv("final_list.csv")
+    meaningful_messages_final.to_csv("final_list.csv")
     logging.critical("transforming--- %s seconds ---" % (time.time() - start_time))
     return meaningful_messages_final
 
