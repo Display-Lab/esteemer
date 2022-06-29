@@ -18,8 +18,10 @@ def read(file):
     g = Graph()
     g.parse(file)
     logging.critical(" reading graph--- %s seconds ---" % (time.time() - start_time)) 
+    return g
+def read_contenders(graph_read):
     start_time = time.time()
-    qres = g.query(
+    qres = graph_read.query(
         """
     PREFIX obo: <http://purl.obolibrary.org/obo/>
     PREFIX slowmo: <http://example.com/slowmo#>
@@ -29,8 +31,6 @@ def read(file):
     ?o2 slowmo:RegardingComparator ?comparator .
     ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
-    ?comparator ?p4 ?o4 .
-    ?measure ?p5 ?o5 . 
     } 
     WHERE {
     ?candidate ?p ?o .
@@ -38,16 +38,50 @@ def read(file):
     ?o2 slowmo:RegardingComparator ?comparator .
     ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
-    ?comparator ?p4 ?o4 .
-    ?measure ?p5 ?o5 .
     }
     """
     )
-    logging.critical(" querying graph--- %s seconds ---" % (time.time() - start_time)) 
+    logging.critical(" querying contenders graph--- %s seconds ---" % (time.time() - start_time)) 
+    return qres.graph
+def read_measures(graph_read):
+    start_time = time.time()
+    qres = graph_read.query(
+        """
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX slowmo: <http://example.com/slowmo#>
+    construct {
+    ?candidate slowmo:RegardingMeasure ?measure .
+    ?measure ?p3 ?o3 .
+    }
+    WHERE {
+    ?candidate slowmo:RegardingMeasure ?measure .
+    ?measure ?p3 ?o3 .
+    }
+    """
+    )
+    logging.critical(" querying measures graph--- %s seconds ---" % (time.time() - start_time)) 
+    return qres.graph
+def read_comparators(graph_read):
+    start_time = time.time()
+    qres = graph_read.query(
+        """
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX slowmo: <http://example.com/slowmo#>
+    construct {
+    ?candidate slowmo:RegardingComparator ?comparator .
+    ?comparator ?p2 ?o2 .
+    }
+    WHERE {
+    ?candidate slowmo:RegardingComparator ?comparator .
+    ?comparator ?p2 ?o2 .
+    }
+    """
+    )
+    logging.critical(" querying comparator graph--- %s seconds ---" % (time.time() - start_time)) 
     return qres.graph
 
 
-def transform(contenders_graph):
+def transform(contenders_graph,measures_graph,comparator_graph):
     start_time = time.time()
     contenders_graph.bind("obo", "http://purl.obolibrary.org/obo/")
     contenders_graph.bind("slowmo", "http://example.com/slowmo#")
@@ -56,9 +90,15 @@ def transform(contenders_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    contender_messages_df.to_csv("df_es.csv")
-    meaningful_messages_final = contender_messages_df
-
+    #contender_messages_df.to_csv("contenders.csv")
+    measures_df = to_dataframe(measures_graph)
+    measures_df.reset_index(inplace=True)
+    measures_df = measures_df.rename(columns={"index": "id"})
+    #measures_df.to_csv("measures.csv")
+    comparator_df = to_dataframe(comparator_graph)
+    comparator_df.reset_index(inplace=True)
+    comparator_df = comparator_df.rename(columns={"index": "id"})
+    #comparator_df.to_csv("comparators.csv")
     column_values = [
         "obo:RO_0000091{BNode}[0]",
         "obo:RO_0000091{BNode}[1]",
@@ -88,20 +128,22 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
-    reference_df2 = contender_messages_df.filter(
+    reference_df2 = comparator_df.filter(
         [
             "id",
-            "rdf:type{URIRef}",
-            "slowmo:WithComparator{BNode}[0]",
-            "slowmo:WithComparator{BNode}[1]",
-            "dcterms:title{Literal}",
-            "http://schema.org/identifier{Literal}",
-            "slowmo:ComparisonValue{Literal}(xsd:double)",
+            "http://example.com/slowmo#ComparisonValue{Literal}(xsd:double)",
             "http://schema.org/name{Literal}"
         ],
         axis=1,
     )
-   
+    reference_df3 = measures_df.filter(
+        [
+            "id",
+            "dcterms:title{Literal}",
+            "http://schema.org/identifier{Literal}"
+        ],
+        axis=1,
+    )
     
 
     meaningful_messages_df = contender_messages_df[
@@ -152,56 +194,57 @@ def transform(contenders_graph):
         ],
         axis=1,
     )
+    #intermediate_messages_final.to_csv("intermediate.csv")
     
-    with_comparator_0 =[]
-    with_comparator_1 =[]
+    # with_comparator_0 =[]
+    # with_comparator_1 =[]
     title=[]
     identifier_1=[]
     comparison_value =[]
     name=[]
     for rowIndex, row in intermediate_messages_final.iterrows():  # iterate over rows
-      for columnIndex, value in row.items():
-        if columnIndex in column_values1:
+       for columnIndex, value in row.items():
+         if columnIndex in column_values1:
           a = reference_df2.loc[reference_df2["id"] == value]
           if not a.empty:
             a.reset_index(drop=True, inplace=True)
-            #with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
-            #with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
-            #title.append(a["dcterms:title{Literal}"][0])
-            #identifier_1.append(a["http://schema.org/identifier{Literal}"][0])
-            comparison_value.append(a["slowmo:ComparisonValue{Literal}(xsd:double)"][0])
+    #         #with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
+    #         #with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
+    #         #title.append(a["dcterms:title{Literal}"][0])
+    #         #identifier_1.append(a["http://schema.org/identifier{Literal}"][0])
+            comparison_value.append(a["http://example.com/slowmo#ComparisonValue{Literal}(xsd:double)"][0])
             name.append(a["http://schema.org/name{Literal}"][0])
             
-    #intermediate_messages_final["with_comparator_0"] = with_comparator_0
-    #intermediate_messages_final["with_comparator_1"] = with_comparator_1
-    #intermediate_messages_final["title"] = title
-    #intermediate_messages_final["Measure Name"] = identifier_1
+    # #intermediate_messages_final["with_comparator_0"] = with_comparator_0
+    # #intermediate_messages_final["with_comparator_1"] = with_comparator_1
+    # #intermediate_messages_final["title"] = title
+    # #intermediate_messages_final["Measure Name"] = identifier_1
     intermediate_messages_final["comparison value"] = comparison_value
     intermediate_messages_final["name"]=name
 
-    #meaningful_messages_df["disposition"] = disposition
-    #meaningful_messages_df["reference_values"] = values
+    # #meaningful_messages_df["disposition"] = disposition
+    # #meaningful_messages_df["reference_values"] = values
     for rowIndex, row in intermediate_messages_final.iterrows():  # iterate over rows
       for columnIndex, value in row.items():
         if columnIndex in column_values2:
-          a = reference_df2.loc[reference_df2["id"] == value]
+          a = reference_df3.loc[reference_df3["id"] == value]
           if not a.empty:
             a.reset_index(drop=True, inplace=True)
-            with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
-            with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
+    #         with_comparator_0.append(a["slowmo:WithComparator{BNode}[0]"][0])
+    #         with_comparator_1.append(a["slowmo:WithComparator{BNode}[1]"][0])
             title.append(a["dcterms:title{Literal}"][0])
             identifier_1.append(a["http://schema.org/identifier{Literal}"][0])
-            #comparison_value.append(a["slowmo:ComparisonValue{Literal}(xsd:double)"][0])
-            #name.append(a["http://schema.org/name{Literal}"][0])
+    #         #comparison_value.append(a["slowmo:ComparisonValue{Literal}(xsd:double)"][0])
+    #         #name.append(a["http://schema.org/name{Literal}"][0])
             
-    intermediate_messages_final["with_comparator_0"] = with_comparator_0
-    intermediate_messages_final["with_comparator_1"] = with_comparator_1
+    # intermediate_messages_final["with_comparator_0"] = with_comparator_0
+    # intermediate_messages_final["with_comparator_1"] = with_comparator_1
     intermediate_messages_final["title"] = title
     intermediate_messages_final["Measure Name"] = identifier_1
-    #intermediate_messages_final["comparison value"] = comparison_value
-    #intermediate_messages_final["name"]=name
+    # #intermediate_messages_final["comparison value"] = comparison_value
+    # #intermediate_messages_final["name"]=name
            
-    intermediate_messages_final.to_csv("intermediate.csv")
+    #intermediate_messages_final.to_csv("intermediate1.csv")
      
     meaningful_messages_final = intermediate_messages_final.filter(
         [
@@ -225,7 +268,9 @@ def transform(contenders_graph):
     )
     meaningful_messages_final.to_csv("final_list.csv")
     logging.critical("transforming--- %s seconds ---" % (time.time() - start_time))
+    # return contender_messages_df
     return meaningful_messages_final
+
 
 
 def graph_from_sparql_endpoint(endpoint):

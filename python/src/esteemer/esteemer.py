@@ -13,7 +13,7 @@ from rdfpandas.graph import to_dataframe
 from SPARQLWrapper import XML, SPARQLWrapper
 
 # from .load_for_real import load
-from .load import read, transform
+from .load import read, transform,read_contenders,read_measures,read_comparators
 from .score import score, select
 
 # load()
@@ -22,13 +22,15 @@ warnings.filterwarnings("ignore")
 # TODO: process command line args if using graph_from_file()
 # Read graph and convert to dataframe
 start_time = time.time()
-contenders_graph = read(sys.argv[1])
-
+graph_read = read(sys.argv[1])
+contenders_graph = read_contenders(graph_read)
+measures_graph = read_measures(graph_read)
+comparator_graph = read_comparators(graph_read)
 # print(contenders_graph)
 # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
 # print(contenders_graph.serialize(format="ttl"))
 # Transform dataframe to more meaningful dataframe
-meaningful_messages_final = transform(contenders_graph)
+meaningful_messages_final = transform(contenders_graph,measures_graph,comparator_graph)
 # print(meaningful_messages_final)
 # assign score for each of meaningful_messages
 start_time1 = time.time()
