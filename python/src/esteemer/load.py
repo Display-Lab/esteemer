@@ -18,32 +18,72 @@ def read(file):
     g = Graph()
     g.parse(file)
     logging.critical(" reading graph--- %s seconds ---" % (time.time() - start_time)) 
+    return g
+def read_contenders(graph_read):
     start_time = time.time()
-    qres = g.query(
+    qres = graph_read.query(
         """
     PREFIX obo: <http://purl.obolibrary.org/obo/>
     PREFIX slowmo: <http://example.com/slowmo#>
     construct {
     ?candidate ?p ?o .
-    ?candidate obo:RO_0000091 ?disposition .
-    ?disposition ?p2 ?o2 .
+    ?candidate obo:RO_0000091 ?o2 .
+    ?o2 slowmo:RegardingComparator ?comparator .
+    ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
     }
     WHERE {
     ?candidate a obo:cpo_0000053 .
     ?candidate slowmo:AncestorPerformer ?performer .
-    ?candidate obo:RO_0000091 ?disposition .
+    ?candidate obo:RO_0000091 ?o2 .
     ?candidate ?p ?o .
-    ?disposition ?p2 ?o2 .
+    ?o2 slowmo:RegardingComparator ?comparator .
+    ?o2 slowmo:RegardingMeasure ?measure .
     ?candidate slowmo:acceptable_by ?o3 .
     }
     """
     )
-    logging.critical(" querying graph--- %s seconds ---" % (time.time() - start_time)) 
+    logging.critical(" querying contenders graph--- %s seconds ---" % (time.time() - start_time)) 
+    return qres.graph
+def read_measures(graph_read):
+    start_time = time.time()
+    qres = graph_read.query(
+        """
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX slowmo: <http://example.com/slowmo#>
+    construct {
+    ?candidate slowmo:RegardingMeasure ?measure .
+    ?measure ?p3 ?o3 .
+    }
+    WHERE {
+    ?candidate slowmo:RegardingMeasure ?measure .
+    ?measure ?p3 ?o3 .
+    }
+    """
+    )
+    logging.critical(" querying measures graph--- %s seconds ---" % (time.time() - start_time)) 
+    return qres.graph
+def read_comparators(graph_read):
+    start_time = time.time()
+    qres = graph_read.query(
+        """
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    PREFIX slowmo: <http://example.com/slowmo#>
+    construct {
+    ?candidate slowmo:RegardingComparator ?comparator .
+    ?comparator ?p2 ?o2 .
+    }
+    WHERE {
+    ?candidate slowmo:RegardingComparator ?comparator .
+    ?comparator ?p2 ?o2 .
+    }
+    """
+    )
+    logging.critical(" querying comparator graph--- %s seconds ---" % (time.time() - start_time)) 
     return qres.graph
 
 
-def transform(contenders_graph):
+def transform(contenders_graph,measures_graph,comparator_graph):
     start_time = time.time()
     contenders_graph.bind("obo", "http://purl.obolibrary.org/obo/")
     contenders_graph.bind("slowmo", "http://example.com/slowmo#")
@@ -52,79 +92,88 @@ def transform(contenders_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    # contender_messages_df.to_csv("df_es.csv")
-    column_values = [
-        "obo:RO_0000091{BNode}[0]",
-        "obo:RO_0000091{BNode}[1]",
-        "obo:RO_0000091{BNode}[2]",
-        "obo:RO_0000091{BNode}[3]",
-        "obo:RO_0000091{BNode}[4]",
-        "obo:RO_0000091{BNode}[5]",
-        "obo:RO_0000091{BNode}[6]",
-        "obo:RO_0000091{BNode}[7]",
-        "obo:RO_0000091{BNode}[8]",
-        "obo:RO_0000091{BNode}[9]",
-        "obo:RO_0000091{BNode}[10]",
-    ]
+    contender_messages_df.to_csv("contenders.csv")
+    measures_df = to_dataframe(measures_graph)
+    measures_df.reset_index(inplace=True)
+    measures_df = measures_df.rename(columns={"index": "id"})
+    measures_df.to_csv("measures.csv")
+    comparator_df = to_dataframe(comparator_graph)
+    comparator_df.reset_index(inplace=True)
+    comparator_df = comparator_df.rename(columns={"index": "id"})
+    comparator_df.to_csv("comparators.csv")
+    # column_values = [
+    #     "obo:RO_0000091{BNode}[0]",
+    #     "obo:RO_0000091{BNode}[1]",
+    #     "obo:RO_0000091{BNode}[2]",
+    #     "obo:RO_0000091{BNode}[3]",
+    #     "obo:RO_0000091{BNode}[4]",
+    #     "obo:RO_0000091{BNode}[5]",
+    #     "obo:RO_0000091{BNode}[6]",
+    #     "obo:RO_0000091{BNode}[7]",
+    #     "obo:RO_0000091{BNode}[8]",
+    #     "obo:RO_0000091{BNode}[9]",
+    #     "obo:RO_0000091{BNode}[10]",
+    # ]
 
-    reference_df = contender_messages_df.filter(
-        [
-            "id",
-            "rdf:type{URIRef}",
-            "slowmo:RegardingComparator{BNode}",
-            "slowmo:RegardingMeasure{BNode}",
-        ],
-        axis=1,
-    )
+    # reference_df = contender_messages_df.filter(
+    #     [
+    #         "id",
+    #         "rdf:type{URIRef}",
+    #         "slowmo:RegardingComparator{BNode}",
+    #         "slowmo:RegardingMeasure{BNode}",
+    #     ],
+    #     axis=1,
+    # )
 
-    meaningful_messages_df = contender_messages_df[
-        contender_messages_df["slowmo:AncestorPerformer{Literal}"].notna()
-    ]
-    reference_df1 = reference_df.dropna()
+    # meaningful_messages_df = contender_messages_df[
+    #     contender_messages_df["slowmo:AncestorPerformer{Literal}"].notna()
+    # ]
+    # reference_df1 = reference_df.dropna()
 
-    RegardingComparator = []
-    RegardingMeasure = []
-    disposition = []
-    values = []
+    # RegardingComparator = []
+    # RegardingMeasure = []
+    # disposition = []
+    # values = []
 
-    for rowIndex, row in meaningful_messages_df.iterrows():  # iterate over rows
-        b = 0
-        for columnIndex, value in row.items():
-            if columnIndex in column_values:
-                a = reference_df1.loc[reference_df1["id"] == value]
-                if not a.empty:
-                    if b == 0:
-                        a.reset_index(drop=True, inplace=True)
-                        disposition.append(a["rdf:type{URIRef}"][0])
-                        values.append(value)
-                        RegardingComparator.append(
-                            a["slowmo:RegardingComparator{BNode}"][0]
-                        )
-                        RegardingMeasure.append(a["slowmo:RegardingMeasure{BNode}"][0])
-                        b = b + 1
-    meaningful_messages_df["RegardingComparator"] = RegardingComparator
-    meaningful_messages_df["RegardingMeasure"] = RegardingMeasure
-    meaningful_messages_df["disposition"] = disposition
-    meaningful_messages_df["reference_values"] = values
-    meaningful_messages_final = meaningful_messages_df.filter(
-        [
-            "id",
-            "slowmo:AncestorPerformer{Literal}",
-            "slowmo:AncestorTemplate{Literal}",
-            "disposition",
-            "reference_values",
-            "rdf:type{URIRef}",
-            "psdo:PerformanceSummaryDisplay{Literal}",
-            "psdo:PerformanceSummaryTextualEntity{Literal}",
-            "RegardingComparator",
-            "RegardingMeasure",
-            "slowmo:acceptable_by{URIRef}[0]",
-            "slowmo:acceptable_by{URIRef}[1]",
-        ],
-        axis=1,
-    )
-    logging.critical("transforming--- %s seconds ---" % (time.time() - start_time)) 
-    return meaningful_messages_final
+    # for rowIndex, row in meaningful_messages_df.iterrows():  # iterate over rows
+    #     b = 0
+    #     for columnIndex, value in row.items():
+    #         if columnIndex in column_values:
+    #             a = reference_df1.loc[reference_df1["id"] == value]
+    #             if not a.empty:
+    #                 if b == 0:
+    #                     a.reset_index(drop=True, inplace=True)
+    #                     disposition.append(a["rdf:type{URIRef}"][0])
+    #                     values.append(value)
+    #                     RegardingComparator.append(
+    #                         a["slowmo:RegardingComparator{BNode}"][0]
+    #                     )
+    #                     RegardingMeasure.append(a["slowmo:RegardingMeasure{BNode}"][0])
+    #                     b = b + 1
+    # meaningful_messages_df["RegardingComparator"] = RegardingComparator
+    # meaningful_messages_df["RegardingMeasure"] = RegardingMeasure
+    # meaningful_messages_df["disposition"] = disposition
+    # meaningful_messages_df["reference_values"] = values
+    # meaningful_messages_final = meaningful_messages_df.filter(
+    #     [
+    #         "id",
+    #         "slowmo:AncestorPerformer{Literal}",
+    #         "slowmo:AncestorTemplate{Literal}",
+    #         "disposition",
+    #         "reference_values",
+    #         "rdf:type{URIRef}",
+    #         "psdo:PerformanceSummaryDisplay{Literal}",
+    #         "psdo:PerformanceSummaryTextualEntity{Literal}",
+    #         "RegardingComparator",
+    #         "RegardingMeasure",
+    #         "slowmo:acceptable_by{URIRef}[0]",
+    #         "slowmo:acceptable_by{URIRef}[1]",
+    #     ],
+    #     axis=1,
+    # )
+    # logging.critical("transforming--- %s seconds ---" % (time.time() - start_time)) 
+    # return meaningful_messages_final
+    return contender_messages_df
 
 
 def graph_from_sparql_endpoint(endpoint):
