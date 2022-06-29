@@ -22,10 +22,15 @@ warnings.filterwarnings("ignore")
 # TODO: process command line args if using graph_from_file()
 # Read graph and convert to dataframe
 start_time = time.time()
+<<<<<<< HEAD
 graph_read = read(sys.argv[1])
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
 comparator_graph = read_comparators(graph_read)
+=======
+contenders_graph = read(sys.argv[1])
+
+>>>>>>> 1e94ea645179fcf3c889409b3b83baa556d07bac
 # print(contenders_graph)
 # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
 # print(contenders_graph.serialize(format="ttl"))
