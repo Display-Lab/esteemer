@@ -22,15 +22,10 @@ warnings.filterwarnings("ignore")
 # TODO: process command line args if using graph_from_file()
 # Read graph and convert to dataframe
 start_time = time.time()
-<<<<<<< HEAD
 graph_read = read(sys.argv[1])
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
 comparator_graph = read_comparators(graph_read)
-=======
-contenders_graph = read(sys.argv[1])
-
->>>>>>> 1e94ea645179fcf3c889409b3b83baa556d07bac
 # print(contenders_graph)
 # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
 # print(contenders_graph.serialize(format="ttl"))
@@ -39,11 +34,11 @@ meaningful_messages_final = transform(contenders_graph,measures_graph,comparator
 # print(meaningful_messages_final)
 # assign score for each of meaningful_messages
 start_time1 = time.time()
-#meaningful_messages_final = score(meaningful_messages_final)
+meaningful_messages_final = score(meaningful_messages_final)
 # select maximum of the meaningful_messages
-#finalData = select(meaningful_messages_final)
+finalData = select(meaningful_messages_final)
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
-#print(finalData)
+print(finalData)
 
 time_taken = time.time()-start_time
 logging.critical("---total esteemer run time according python script %s seconds ---" % (time.time() - start_time))
