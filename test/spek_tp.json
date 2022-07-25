@@ -83,6 +83,7 @@
         {
             "@id": "_:b11",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -134,6 +135,7 @@
         {
             "@id": "_:b17",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -302,6 +304,7 @@
         {
             "@id": "_:b37",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -449,6 +452,7 @@
         {
             "@id": "_:b53",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -533,6 +537,7 @@
         {
             "@id": "_:b62",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -700,6 +705,7 @@
         {
             "@id": "_:b84",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -989,6 +995,7 @@
         {
             "@id": "_:b116",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -1051,6 +1058,7 @@
         {
             "@id": "_:b124",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -1183,6 +1191,7 @@
         {
             "@id": "_:b138",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -1301,6 +1310,7 @@
         {
             "@id": "_:b153",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -1416,6 +1426,7 @@
         {
             "@id": "_:b166",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -1677,6 +1688,7 @@
         {
             "@id": "_:b198",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2038,6 +2050,7 @@
         {
             "@id": "_:b244",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2117,6 +2130,7 @@
         {
             "@id": "_:b254",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2222,6 +2236,7 @@
         {
             "@id": "_:b265",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2326,6 +2341,7 @@
         {
             "@id": "_:b277",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2802,6 +2818,7 @@
         {
             "@id": "_:b339",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2858,6 +2875,7 @@
         {
             "@id": "_:b347",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -2954,6 +2972,7 @@
         {
             "@id": "_:b360",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3054,6 +3073,7 @@
         {
             "@id": "_:b370",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3115,6 +3135,7 @@
         {
             "@id": "_:b377",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3177,6 +3198,7 @@
         {
             "@id": "_:b385",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3255,6 +3277,7 @@
         {
             "@id": "_:b394",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3443,6 +3466,7 @@
         {
             "@id": "_:b417",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3542,6 +3566,7 @@
         {
             "@id": "_:b429",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3707,6 +3732,7 @@
         {
             "@id": "_:b453",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -3887,6 +3913,7 @@
         {
             "@id": "_:b470",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4055,6 +4082,7 @@
         {
             "@id": "_:b495",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4212,6 +4240,7 @@
         {
             "@id": "_:b514",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4329,6 +4358,7 @@
         {
             "@id": "_:b529",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4377,6 +4407,7 @@
         {
             "@id": "_:b535",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4640,6 +4671,7 @@
         {
             "@id": "_:b570",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4746,6 +4778,7 @@
         {
             "@id": "_:b583",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4833,6 +4866,7 @@
         {
             "@id": "_:b592",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4916,6 +4950,7 @@
         {
             "@id": "_:b600",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -4960,6 +4995,7 @@
         {
             "@id": "_:b605",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5073,6 +5109,7 @@
         {
             "@id": "_:b619",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5163,6 +5200,7 @@
         {
             "@id": "_:b628",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5263,6 +5301,7 @@
         {
             "@id": "_:b638",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5409,6 +5448,7 @@
         {
             "@id": "_:b657",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5488,6 +5528,7 @@
         {
             "@id": "_:b664",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5652,6 +5693,7 @@
         {
             "@id": "_:b684",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5789,6 +5831,7 @@
         {
             "@id": "_:b701",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5862,6 +5905,7 @@
         {
             "@id": "_:b711",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -5992,6 +6036,7 @@
         {
             "@id": "_:b724",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -6092,6 +6137,7 @@
         {
             "@id": "_:b734",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -6274,6 +6320,7 @@
         {
             "@id": "_:b756",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -6762,6 +6809,7 @@
         {
             "@id": "_:b818",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -6826,6 +6874,7 @@
         {
             "@id": "_:b825",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -6922,6 +6971,7 @@
         {
             "@id": "_:b840",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7029,6 +7079,7 @@
         {
             "@id": "_:b851",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7124,6 +7175,7 @@
         {
             "@id": "_:b862",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7168,6 +7220,7 @@
         {
             "@id": "_:b867",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7238,6 +7291,7 @@
         {
             "@id": "_:b874",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7493,6 +7547,7 @@
         {
             "@id": "_:b901",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7560,6 +7615,7 @@
         {
             "@id": "_:b908",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7700,6 +7756,7 @@
         {
             "@id": "_:b925",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7807,6 +7864,7 @@
         {
             "@id": "_:b936",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7844,6 +7902,7 @@
         {
             "@id": "_:b940",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -7934,6 +7993,7 @@
         {
             "@id": "_:b952",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8062,6 +8122,7 @@
         {
             "@id": "_:b966",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8165,6 +8226,7 @@
         {
             "@id": "_:b979",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8221,6 +8283,7 @@
         {
             "@id": "_:b984",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8307,6 +8370,7 @@
         {
             "@id": "_:b995",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8427,6 +8491,7 @@
         {
             "@id": "_:b1011",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8534,6 +8599,7 @@
         {
             "@id": "_:b1022",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8601,6 +8667,7 @@
         {
             "@id": "_:b1029",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8681,6 +8748,7 @@
         {
             "@id": "_:b1037",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8725,6 +8793,7 @@
         {
             "@id": "_:b1042",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8810,6 +8879,7 @@
         {
             "@id": "_:b1052",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -8921,6 +8991,7 @@
         {
             "@id": "_:b1064",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9012,6 +9083,7 @@
         {
             "@id": "_:b1074",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9103,6 +9175,7 @@
         {
             "@id": "_:b1084",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9203,6 +9276,7 @@
         {
             "@id": "_:b1094",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9301,6 +9375,7 @@
         {
             "@id": "_:b1105",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9390,6 +9465,7 @@
         {
             "@id": "_:b1113",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9526,6 +9602,7 @@
         {
             "@id": "_:b1129",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9584,6 +9661,7 @@
         {
             "@id": "_:b1136",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9789,6 +9867,7 @@
         {
             "@id": "_:b1161",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -9968,6 +10047,7 @@
         {
             "@id": "_:b1183",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10113,6 +10193,7 @@
         {
             "@id": "_:b1199",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10234,6 +10315,7 @@
         {
             "@id": "_:b1213",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10281,6 +10363,7 @@
         {
             "@id": "_:b1218",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10328,6 +10411,7 @@
         {
             "@id": "_:b1223",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10497,6 +10581,7 @@
         {
             "@id": "_:b1239",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10552,6 +10637,7 @@
         {
             "@id": "_:b1246",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10858,6 +10944,7 @@
         {
             "@id": "_:b1285",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -10958,6 +11045,7 @@
         {
             "@id": "_:b1295",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11096,6 +11184,7 @@
         {
             "@id": "_:b1310",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11196,6 +11285,7 @@
         {
             "@id": "_:b1323",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11314,6 +11404,7 @@
         {
             "@id": "_:b1336",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11458,6 +11549,7 @@
         {
             "@id": "_:b1351",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11568,6 +11660,7 @@
         {
             "@id": "_:b1365",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11671,6 +11764,7 @@
         {
             "@id": "_:b1375",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11759,6 +11853,7 @@
         {
             "@id": "_:b1385",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11799,6 +11894,7 @@
         {
             "@id": "_:b1389",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -11894,6 +11990,7 @@
         {
             "@id": "_:b1400",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12000,6 +12097,7 @@
         {
             "@id": "_:b1413",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12125,6 +12223,7 @@
         {
             "@id": "_:b1427",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12209,6 +12308,7 @@
         {
             "@id": "_:b1436",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12263,6 +12363,7 @@
         {
             "@id": "_:b1442",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12361,6 +12462,7 @@
         {
             "@id": "_:b1456",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12493,6 +12595,7 @@
         {
             "@id": "_:b1471",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12581,6 +12684,7 @@
         {
             "@id": "_:b1481",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12625,6 +12729,7 @@
         {
             "@id": "_:b1486",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12715,6 +12820,7 @@
         {
             "@id": "_:b1495",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -12800,6 +12906,7 @@
         {
             "@id": "_:b1505",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13005,6 +13112,7 @@
         {
             "@id": "_:b1533",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13172,6 +13280,7 @@
         {
             "@id": "_:b1553",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13318,6 +13427,7 @@
         {
             "@id": "_:b1572",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13413,6 +13523,7 @@
         {
             "@id": "_:b1580",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13514,6 +13625,7 @@
         {
             "@id": "_:b1594",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13622,6 +13734,7 @@
         {
             "@id": "_:b1609",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13706,6 +13819,7 @@
         {
             "@id": "_:b1618",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13743,6 +13857,7 @@
         {
             "@id": "_:b1622",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -13907,6 +14022,7 @@
         {
             "@id": "_:b1645",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14049,6 +14165,7 @@
         {
             "@id": "_:b1661",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14118,6 +14235,7 @@
         {
             "@id": "_:b1667",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14224,6 +14342,7 @@
         {
             "@id": "_:b1680",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14324,6 +14443,7 @@
         {
             "@id": "_:b1690",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14498,6 +14618,7 @@
         {
             "@id": "_:b1712",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14617,6 +14738,7 @@
         {
             "@id": "_:b1723",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14727,6 +14849,7 @@
         {
             "@id": "_:b1737",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14819,6 +14942,7 @@
         {
             "@id": "_:b1748",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14951,6 +15075,7 @@
         {
             "@id": "_:b1763",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -14997,6 +15122,7 @@
         {
             "@id": "_:b1767",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15073,6 +15199,7 @@
         {
             "@id": "_:b1774",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15283,6 +15410,7 @@
         {
             "@id": "_:b1798",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15440,6 +15568,7 @@
         {
             "@id": "_:b1817",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15524,6 +15653,7 @@
         {
             "@id": "_:b1826",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15620,6 +15750,7 @@
         {
             "@id": "_:b1838",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15654,6 +15785,7 @@
         {
             "@id": "_:b1842",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15845,6 +15977,7 @@
         {
             "@id": "_:b1868",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -15966,6 +16099,7 @@
         {
             "@id": "_:b1879",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16067,6 +16201,7 @@
         {
             "@id": "_:b1890",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16175,6 +16310,7 @@
         {
             "@id": "_:b1899",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16282,6 +16418,7 @@
         {
             "@id": "_:b1910",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16438,6 +16575,7 @@
         {
             "@id": "_:b1928",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16498,6 +16636,7 @@
         {
             "@id": "_:b1934",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16578,6 +16717,7 @@
         {
             "@id": "_:b1945",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16787,6 +16927,7 @@
         {
             "@id": "_:b1971",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16901,6 +17042,7 @@
         {
             "@id": "_:b1986",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -16962,6 +17104,7 @@
         {
             "@id": "_:b1993",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17017,6 +17160,7 @@
         {
             "@id": "_:b2000",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17125,6 +17269,7 @@
         {
             "@id": "_:b2012",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17236,6 +17381,7 @@
         {
             "@id": "_:b2024",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17276,6 +17422,7 @@
         {
             "@id": "_:b2028",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17374,6 +17521,7 @@
         {
             "@id": "_:b2042",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17469,6 +17617,7 @@
         {
             "@id": "_:b2056",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17570,6 +17719,7 @@
         {
             "@id": "_:b2067",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17656,6 +17806,7 @@
         {
             "@id": "_:b2078",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17772,6 +17923,7 @@
         {
             "@id": "_:b2093",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17838,6 +17990,7 @@
         {
             "@id": "_:b2099",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -17892,6 +18045,7 @@
         {
             "@id": "_:b2105",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#WorseSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18017,6 +18171,7 @@
         {
             "@id": "_:b2119",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18074,6 +18229,7 @@
         {
             "@id": "_:b2125",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18111,6 +18267,7 @@
         {
             "@id": "_:b2129",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18164,6 +18321,7 @@
         {
             "@id": "_:b2137",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18225,6 +18383,7 @@
         {
             "@id": "_:b2144",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18321,6 +18480,7 @@
         {
             "@id": "_:b2156",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18397,6 +18557,7 @@
         {
             "@id": "_:b2163",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#LostGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18620,6 +18781,7 @@
         {
             "@id": "_:b2188",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18757,6 +18919,7 @@
         {
             "@id": "_:b2205",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18813,6 +18976,7 @@
         {
             "@id": "_:b2210",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -18952,6 +19116,7 @@
         {
             "@id": "_:b2226",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -19031,6 +19196,7 @@
         {
             "@id": "_:b2233",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#BetterGoalBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
@@ -19108,6 +19274,7 @@
         {
             "@id": "_:b2241",
             "slowmo:AncestorTemplate": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+            "psdo:PerformanceSummaryDisplayCompatibletype": "bar,line,text",
             "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R",
             "slowmo:AncestorPerformer": "_:p1",
             "obo:RO_0000091": [
