@@ -16,19 +16,12 @@ warnings.filterwarnings("ignore")
 
 def score(meaningful_messages_final):
     len = meaningful_messages_final.shape[0]
-    score = [1] * len
-    #score = random.sample(range(10, 1000), len)
+    score = random.sample(range(10, 1000), len)
     meaningful_messages_final["score"] = score
     meaningful_messages_final.reset_index(drop=True, inplace=True)
-    meaningful_messages_final.to_csv("df_es1.csv")
+    #meaningful_messages_final.to_csv("df_es1.csv")
     return meaningful_messages_final
     # meaningful_messages_final.to_csv("df_es1.csv")
-
-def apply_indv_preferences(meaningful_messages_final,indv_preferences_read):
-    indv_preferences_df = pd.json_normalize(indv_preferences_read)
-    indv_preferences_df.to_csv('individual_preferences.csv')
-    return meaningful_messages_final
-
 
 
 def select(meaningful_messages_final):
