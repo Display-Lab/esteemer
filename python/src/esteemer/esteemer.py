@@ -41,10 +41,11 @@ start_time1 = time.time()
 meaningful_messages_final = score(meaningful_messages_final)
 #apply individual preferences
 applied_individual_messages = apply_indv_preferences(meaningful_messages_final,indv_preferences_read)
+#
 # select maximum of the meaningful_messages
-#finalData = select(meaningful_messages_final)
+finalData = select(applied_individual_messages)
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
-#print(finalData)
+print(finalData)
 
 time_taken = time.time()-start_time
 logging.critical("---total esteemer run time according python script %s seconds ---" % (time.time() - start_time))

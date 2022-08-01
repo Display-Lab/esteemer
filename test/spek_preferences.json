@@ -2,7 +2,7 @@
     "Message_Format": 
       {
         "top_performer": "0.0",
-        "not_a_top_performer": "3.8",
+        "nontop_performer": "3.8",
         "performance_dropped_below_peer": "7.5",
         "no_message_data_displayed_in_chart_only": "9.4",
         "may_have_opportunity_to_improve": "11.3",
