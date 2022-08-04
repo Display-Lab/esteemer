@@ -42,24 +42,24 @@ def apply_indv_preferences(meaningful_messages_final,indv_preferences_read):
     return messages_preferences ,max_val
 
 def displaypreferences(meaningful_messages_final,display_preferences_df):
-    no_chart_pref=display_preferences_df.at[0,'Utilities.Display_Format.short_sentence_with_no_chart']
+    nochart_pref=display_preferences_df.at[0,'Utilities.Display_Format.short_sentence_with_no_chart']
     bar_pref=display_preferences_df.at[0,'Utilities.Display_Format.bar_chart']
     line_pref=display_preferences_df.at[0,'Utilities.Display_Format.line_graph']
     line_pref = float(line_pref)
     bar_pref = float(bar_pref)
-    no_chart_pref = float(no_chart_pref)
-    my_dict = {"line_pref":[],"bar_pref":[],"no_chart_pref":[]}
+    nochart_pref = float(nochart_pref)
+    my_dict = {"line_pref":[],"bar_pref":[],"nochart_pref":[]}
     if line_pref == 0.0:
         line_pref= 1
     elif bar_pref == 0.0:
         bar_pref =1
-    elif no_chart_pref ==0.0:
-        no_chart_pref = 1 
+    elif nochart_pref ==0.0:
+        nochart_pref = 1 
     display_score =[]
     #max_pref =[]
     my_dict["line_pref"].append(line_pref)
     my_dict["bar_pref"].append(bar_pref)
-    my_dict["no_chart_pref"].append(no_chart_pref)
+    my_dict["nochart_pref"].append(nochart_pref)
     max_val = max(my_dict.items(), key=operator.itemgetter(1))[0]
     #max_val=max(max_pref)
     #print(max_val)
@@ -80,7 +80,7 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
         if line in x:
             row['score'] = row['score']*line_pref
         if text in x :
-            row['score'] = row['score']*no_chart_pref
+            row['score'] = row['score']*nochart_pref
         display_score.append(row['score'])
         #display_pref['DataFrame Column'] = df['DataFrame Column'].astype(int)
         #print(row['score'])
