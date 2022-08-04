@@ -2,6 +2,7 @@ import json
 import random
 import sys
 import warnings
+import operator
 
 import pandas as pd
 from rdflib import Graph, Literal, Namespace, URIRef
@@ -31,13 +32,14 @@ def apply_indv_preferences(meaningful_messages_final,indv_preferences_read):
     display_preferences_df =indv_preferences_df [['Utilities.Display_Format.short_sentence_with_no_chart', 'Utilities.Display_Format.bar_chart','Utilities.Display_Format.line_graph']]
     message_preferences_df =indv_preferences_df[['Utilities.Message_Format.top_performer','Utilities.Message_Format.nontop_performer','Utilities.Message_Format.performance_dropped_below_peer','Utilities.Message_Format.no_message_data_displayed_in_chart_only','Utilities.Message_Format.may_have_opportunity_to_improve','Utilities.Message_Format.performance_approaching_MPOG_goal','Utilities.Message_Format.performance_improving','Utilities.Message_Format.your_performance_is_getting_worse','Utilities.Message_Format.one_of_your_patients_had_an_adverse_event']]
     
-    display_preferences = displaypreferences(meaningful_messages_final,display_preferences_df)
+    display_preferences,max_val = displaypreferences(meaningful_messages_final,display_preferences_df)
     messages_preferences= messagepreferences(display_preferences,message_preferences_df)
+   
     #display_preferences_df.to_csv('display_preferences.csv')
     #message_preferences_df.to_csv('message_preferences_df.csv')
     #indv_preferences_df.to_csv('individual_preferences.csv')
     #messages_preferences.to_csv('message_preferences_final.csv')
-    return messages_preferences
+    return messages_preferences ,max_val
 
 def displaypreferences(meaningful_messages_final,display_preferences_df):
     no_chart_pref=display_preferences_df.at[0,'Utilities.Display_Format.short_sentence_with_no_chart']
@@ -46,13 +48,21 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
     line_pref = float(line_pref)
     bar_pref = float(bar_pref)
     no_chart_pref = float(no_chart_pref)
-    display_score = []
+    my_dict = {"line_pref":[],"bar_pref":[],"no_chart_pref":[]}
     if line_pref == 0.0:
         line_pref= 1
     elif bar_pref == 0.0:
         bar_pref =1
     elif no_chart_pref ==0.0:
         no_chart_pref = 1 
+    display_score =[]
+    #max_pref =[]
+    my_dict["line_pref"].append(line_pref)
+    my_dict["bar_pref"].append(bar_pref)
+    my_dict["no_chart_pref"].append(no_chart_pref)
+    max_val = max(my_dict.items(), key=operator.itemgetter(1))[0]
+    #max_val=max(max_pref)
+    #print(max_val)
     
     #line_pref = int(line_pref)
     #bar_pref = int(bar_pref)
@@ -77,7 +87,7 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
         #print(x)
     meaningful_messages_final['display_score'] = display_score
     
-    return meaningful_messages_final
+    return meaningful_messages_final,max_val
 
 def messagepreferences(display_preferences,message_preferences_df):
     #message_preferences_df.to_csv('before_select.csv')
@@ -106,7 +116,7 @@ def messagepreferences(display_preferences,message_preferences_df):
         #message_pref = row['display_score']
         text=row['psdo:PerformanceSummaryTextualEntity{Literal}']
         x = text.split(" ")
-        print(x)
+        #print(x)
         not1= 'not'
         top='top'
         worse='worse'
@@ -146,18 +156,21 @@ def messagepreferences(display_preferences,message_preferences_df):
 
 
 
-def select(applied_individual_messages):
+def select(applied_individual_messages,max_val):
     # max value of score
     column = applied_individual_messages["message_score"]
+
     max_value = column.max()
     # print(max_value)
 
     h = applied_individual_messages["message_score"].idxmax()
     # print(h)
     message_selected_df = applied_individual_messages.iloc[h, :]
+    message_selected_df.at['psdo:PerformanceSummaryDisplayCompatibletype{Literal}']=max_val
+    #print(message_selected_df.at['psdo:PerformanceSummaryDisplayCompatibletype{Literal}'])
     message_selected_df = message_selected_df.T
     # print(message_selected_df)
     # message_selected_df.to_csv("Selected_Message.csv")
     data = message_selected_df.to_json(orient="index", indent=2 )
-
+   
     return data.replace("\\", "")

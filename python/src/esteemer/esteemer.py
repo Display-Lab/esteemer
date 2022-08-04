@@ -40,10 +40,12 @@ meaningful_messages_final = transform(contenders_graph,measures_graph,comparator
 start_time1 = time.time()
 meaningful_messages_final = score(meaningful_messages_final)
 #apply individual preferences
-applied_individual_messages = apply_indv_preferences(meaningful_messages_final,indv_preferences_read)
+applied_individual_messages,max_val = apply_indv_preferences(meaningful_messages_final,indv_preferences_read)
+val = max_val.split('_')
+print(val[0])
 #
 # select maximum of the meaningful_messages
-finalData = select(applied_individual_messages)
+finalData = select(applied_individual_messages,val[0])
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
 print(finalData)
 
