@@ -26,6 +26,8 @@ start_time = time.time()
 graph_read = read(sys.argv[1])
 f=open(sys.argv[2])
 indv_preferences_read = json.load(f)
+f1=open(sys.argv[3])
+message_code= json.load(f1)
 #indv_preferences_read_df = pd.read_json(sys.argv[2], lines=True)
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
@@ -45,7 +47,8 @@ val = max_val.split('_')
 print(val[0])
 #
 # select maximum of the meaningful_messages
-finalData = select(applied_individual_messages,val[0])
+
+finalData = select(applied_individual_messages,val[0],message_code)
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
 print(finalData)
 

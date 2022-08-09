@@ -30,7 +30,7 @@ def score(meaningful_messages_final):
 def apply_indv_preferences(meaningful_messages_final,indv_preferences_read):
     indv_preferences_df = pd.json_normalize(indv_preferences_read)
     display_preferences_df =indv_preferences_df [['Utilities.Display_Format.short_sentence_with_no_chart', 'Utilities.Display_Format.bar_chart','Utilities.Display_Format.line_graph']]
-    message_preferences_df =indv_preferences_df[['Utilities.Message_Format.top_performer','Utilities.Message_Format.nontop_performer','Utilities.Message_Format.performance_dropped_below_peer','Utilities.Message_Format.no_message_data_displayed_in_chart_only','Utilities.Message_Format.may_have_opportunity_to_improve','Utilities.Message_Format.performance_approaching_MPOG_goal','Utilities.Message_Format.performance_improving','Utilities.Message_Format.your_performance_is_getting_worse','Utilities.Message_Format.one_of_your_patients_had_an_adverse_event']]
+    message_preferences_df =indv_preferences_df[['Utilities.Message_Format.1.0','Utilities.Message_Format.2.0','Utilities.Message_Format.16.0','Utilities.Message_Format.24.0','Utilities.Message_Format.18.0','Utilities.Message_Format.11.0','Utilities.Message_Format.22.0','Utilities.Message_Format.14.0','Utilities.Message_Format.21.0']]
     
     display_preferences,max_val = displaypreferences(meaningful_messages_final,display_preferences_df)
     messages_preferences= messagepreferences(display_preferences,message_preferences_df)
@@ -91,15 +91,15 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
 
 def messagepreferences(display_preferences,message_preferences_df):
     #message_preferences_df.to_csv('before_select.csv')
-    top_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.top_performer'])
-    nontop_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.nontop_performer'])
-    performance_dropped_below_peer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.performance_dropped_below_peer'])
-    no_message_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.no_message_data_displayed_in_chart_only'])
-    may_improve_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.may_have_opportunity_to_improve'])
-    approaching_goal_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.performance_approaching_MPOG_goal'])
-    performance_improving_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.performance_improving'])
-    getting_worse_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.your_performance_is_getting_worse'])
-    adverse_event_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.one_of_your_patients_had_an_adverse_event'])
+    top_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.1.0'])
+    nontop_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.2.0'])
+    performance_dropped_below_peer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.16.0'])
+    no_message_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.24.0'])
+    may_improve_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.18.0'])
+    approaching_goal_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.11.0'])
+    performance_improving_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.22.0'])
+    getting_worse_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.14.0'])
+    adverse_event_pref = float(message_preferences_df.at[0,'Utilities.Message_Format.21.0'])
     message_score = []
     if top_performer_pref == 0.0:
         top_performer_pref= 1
@@ -115,34 +115,28 @@ def messagepreferences(display_preferences,message_preferences_df):
     for index, row in display_preferences.iterrows():
         #message_pref = row['display_score']
         text=row['psdo:PerformanceSummaryTextualEntity{Literal}']
-        x = text.split(" ")
+        #x = text.split(" ")
         #print(x)
-        not1= 'not'
-        top='top'
-        worse='worse'
-        goal='goal'
-        reached ='reached'
-        above ='above'
-        approaching ='approaching'
-        dropped = 'dropped'
-        below ='below'
-        benchmark='benchmark'
-        if not1 and top in x:
-            row['display_score'] = row['display_score']*nontop_performer_pref
-        if (top and not not1 in x) or (reached and goal in x) or (reached and benchmark in x) or(above and goal in x):
+        if text == "1.0" :
             row['display_score'] = row['display_score']*top_performer_pref
-        # if reached and goal in x:
-        #     row['display_score'] = row['display_score']*top_performer_pref
-        # if reached and benchmark in x:
-        #     row['display_score'] = row['display_score']*top_performer_pref
-        # if above and goal in x:
-        #     row['display_score'] = row['display_score']*top_performer_pref
-        if dropped and below in x:
+        if text == "2.0":
+            row['display_score'] = row['display_score']*nontop_performer_pref
+        #if (top and not not1 in x) or (reached and goal in x) or (reached and benchmark in x) or(above and goal in x):
+            
+        if text == "16.0":
             row['display_score'] = row['display_score']*performance_dropped_below_peer_pref
-        if approaching and goal:
+        if text == "24.0":
+            row['display_score'] = row['display_score']*no_message_pref
+        if text == "18.0":
+            row['display_score'] = row['display_score']*may_improve_pref
+        if text == "11.0":
             row['display_score'] = row['display_score']*approaching_goal_pref
-        if worse in x:
+        if text == "22.0":
+            row['display_score'] = row['display_score']*performance_improving_pref
+        if text == "14.0":
             row['display_score'] = row['display_score']*getting_worse_pref
+        if text == "21.0":
+            row['display_score'] = row['display_score']*adverse_event_pref
         message_score.append(row['display_score'])
     display_preferences['message_score'] = message_score
     return display_preferences
@@ -156,10 +150,11 @@ def messagepreferences(display_preferences,message_preferences_df):
 
 
 
-def select(applied_individual_messages,max_val):
+def select(applied_individual_messages,max_val,message_code):
     # max value of score
     column = applied_individual_messages["message_score"]
-
+    message_code_df = pd.json_normalize(message_code)
+    #message_code_df.to_csv("message_code_df.csv")
     max_value = column.max()
     # print(max_value)
 
@@ -168,6 +163,12 @@ def select(applied_individual_messages,max_val):
     message_selected_df = applied_individual_messages.iloc[h, :]
     #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
     message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
+    message = "Message_ids."+message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
+    message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
+
+    #print(type(message_code_df))
+    
+
     #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
     #message_selected_df.drop(['score','display_score','message_score'], axis=1)
     message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)

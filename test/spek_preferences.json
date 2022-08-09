@@ -1,15 +1,15 @@
 {"Utilities": {
     "Message_Format": 
       {
-        "top_performer": "0.0",
-        "nontop_performer": "3.8",
-        "performance_dropped_below_peer": "7.5",
-        "no_message_data_displayed_in_chart_only": "9.4",
-        "may_have_opportunity_to_improve": "11.3",
-        "performance_approaching_MPOG_goal": "13.2",
-        "performance_improving": "15.1" ,
-        "your_performance_is_getting_worse": "22.6" ,
-        "one_of_your_patients_had_an_adverse_event": "62.3" 
+        "1.0": "0.0",
+        "2.0": "3.8",
+        "16.0": "7.5",
+        "24.0": "9.4",
+        "18.0": "11.3",
+        "11.0": "13.2",
+        "22.0": "15.1" ,
+        "14.0": "22.6" ,
+        "21.0": "62.3" 
       },
     "Display_Format":
       {
