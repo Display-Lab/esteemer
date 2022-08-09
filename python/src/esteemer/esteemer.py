@@ -2,7 +2,6 @@ import sys
 import warnings
 import time
 import logging
-import json
 #from asyncore import read
 
 import pandas as pd
@@ -15,7 +14,7 @@ from SPARQLWrapper import XML, SPARQLWrapper
 
 # from .load_for_real import load
 from .load import read, transform,read_contenders,read_measures,read_comparators
-from .score import score, select,apply_indv_preferences
+from .score import score, select
 
 # load()
 
@@ -41,14 +40,18 @@ meaningful_messages_final = transform(contenders_graph,measures_graph,comparator
 # assign score for each of meaningful_messages
 start_time1 = time.time()
 meaningful_messages_final = score(meaningful_messages_final)
+
 #apply individual preferences
 applied_individual_messages,max_val = apply_indv_preferences(meaningful_messages_final,indv_preferences_read)
 val = max_val.split('_')
 print(val[0])
-#
+
 # select maximum of the meaningful_messages
 
 finalData = select(applied_individual_messages,val[0],message_code)
+
+
+
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
 print(finalData)
 

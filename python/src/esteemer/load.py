@@ -90,7 +90,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    contender_messages_df.to_csv("contenders.csv")
+    #contender_messages_df.to_csv("contenders.csv")
     measures_df = to_dataframe(measures_graph)
     measures_df.reset_index(inplace=True)
     measures_df = measures_df.rename(columns={"index": "id"})
@@ -194,7 +194,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
         ],
         axis=1,
     )
-    intermediate_messages_final.to_csv("intermediate.csv")
+    #intermediate_messages_final.to_csv("intermediate.csv")
     
     # with_comparator_0 =[]
     # with_comparator_1 =[]
