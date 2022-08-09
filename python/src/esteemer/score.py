@@ -69,12 +69,12 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
     #no_chart_pref = int(no_chart_pref)
     #print(type(line_pref))
     for index, row in meaningful_messages_final.iterrows():
-        display_pref = row['psdo:PerformanceSummaryDisplayCompatibletype{Literal}']
+        display_pref = row['psdo:PerformanceSummaryDisplay{Literal}']
         display_pref = display_pref.replace("'", "")
         x = display_pref.split(",")
         bar='bar'
         line='line'
-        text='text'
+        text='none'
         if bar in x:
             row['score'] = row['score']*bar_pref
         if line in x:
@@ -166,9 +166,13 @@ def select(applied_individual_messages,max_val):
     h = applied_individual_messages["message_score"].idxmax()
     # print(h)
     message_selected_df = applied_individual_messages.iloc[h, :]
-    message_selected_df.at['psdo:PerformanceSummaryDisplayCompatibletype{Literal}']=max_val
-    #print(message_selected_df.at['psdo:PerformanceSummaryDisplayCompatibletype{Literal}'])
+    #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
+    message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
+    #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
+    #message_selected_df.drop(['score','display_score','message_score'], axis=1)
+    message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
     message_selected_df = message_selected_df.T
+    
     # print(message_selected_df)
     # message_selected_df.to_csv("Selected_Message.csv")
     data = message_selected_df.to_json(orient="index", indent=2 )
