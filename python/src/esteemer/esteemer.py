@@ -23,6 +23,11 @@ warnings.filterwarnings("ignore")
 # Read graph and convert to dataframe
 start_time = time.time()
 graph_read = read(sys.argv[1])
+f=open(sys.argv[2])
+indv_preferences_read = json.load(f)
+f1=open(sys.argv[3])
+message_code= json.load(f1)
+#indv_preferences_read_df = pd.read_json(sys.argv[2], lines=True)
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
 comparator_graph = read_comparators(graph_read)
@@ -35,8 +40,18 @@ meaningful_messages_final = transform(contenders_graph,measures_graph,comparator
 # assign score for each of meaningful_messages
 start_time1 = time.time()
 meaningful_messages_final = score(meaningful_messages_final)
+
+#apply individual preferences
+applied_individual_messages,max_val = apply_indv_preferences(meaningful_messages_final,indv_preferences_read)
+val = max_val.split('_')
+print(val[0])
+
 # select maximum of the meaningful_messages
-finalData = select(meaningful_messages_final)
+
+finalData = select(applied_individual_messages,val[0],message_code)
+
+
+
 logging.critical("--score and select %s seconds ---" % (time.time() - start_time1))
 print(finalData)
 
