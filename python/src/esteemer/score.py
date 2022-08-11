@@ -142,7 +142,41 @@ def messagepreferences(display_preferences,message_preferences_df):
     return display_preferences
 
 
+def apply_history_message(applied_individual_messages,history,max_val,message_code):
+    # max value of score
+    column = applied_individual_messages["message_score"]
+    message_code_df = pd.json_normalize(message_code)
+    history_df =pd.json_normalize(history)
+    #history_df.at['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
+    print(history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    print(history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    print(history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    print(history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    print(history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    print(history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(history_df.iloc['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'])
+    message_code_df.to_csv("message_code_df.csv")
+    history_df.to_csv("history_df.csv")
+    # max_value = column.max()
+    # # print(max_value)
+
+    # h = applied_individual_messages["message_score"].idxmax()
+    # # print(h)
+    # message_selected_df = applied_individual_messages.iloc[h, :]
+    # #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
+    # message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
+    # message = "Message_ids."+message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
+    # message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
+
+    # #print(type(message_code_df))
     
+
+    # #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
+    # #message_selected_df.drop(['score','display_score','message_score'], axis=1)
+    # message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
+    # #message_selected_df = message_selected_df.T
+    return history_df
+
 
 
 

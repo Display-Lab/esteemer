@@ -17,7 +17,7 @@ from SPARQLWrapper import XML, SPARQLWrapper
 
 # from .load_for_real import load
 from .load import read, transform,read_contenders,read_measures,read_comparators
-from .score import score, select,apply_indv_preferences
+from .score import score, select,apply_indv_preferences,apply_history_message
 
 # load()
 
@@ -30,8 +30,8 @@ f=open(sys.argv[2])
 indv_preferences_read = json.load(f)
 f1=open(sys.argv[3])
 message_code= json.load(f1)
-#f2=open(sys.argv[4])
-#history=json.load(f2)
+f2=open(sys.argv[4])
+history=json.load(f2)
 #indv_preferences_read_df = pd.read_json(sys.argv[2], lines=True)
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
@@ -51,7 +51,7 @@ applied_individual_messages,max_val = apply_indv_preferences(meaningful_messages
 val = max_val.split('_')
 #print(val[0])
 #filter history messages
-#applied_history_filter = apply_history_messages()
+applied_history_filter = apply_history_message(applied_individual_messages,history,val[0],message_code)
 
 
 # select maximum of the meaningful_messages
