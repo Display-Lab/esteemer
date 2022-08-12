@@ -144,38 +144,53 @@ def messagepreferences(display_preferences,message_preferences_df):
 
 def apply_history_message(applied_individual_messages,history,max_val,message_code):
     # max value of score
-    column = applied_individual_messages["message_score"]
+   
     message_code_df = pd.json_normalize(message_code)
     history_df =pd.json_normalize(history)
-    #history_df.at['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
-    print(history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    print(history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    print(history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    print(history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    print(history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    print(history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(history_df.iloc['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'])
-    message_code_df.to_csv("message_code_df.csv")
+    Month1 = remove_last_word(history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    Month2 = remove_last_word(history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(Month2)
+    Month3 = remove_last_word(history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(Month3)
+    Month4 = remove_last_word(history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(Month4)
+    Month5 = remove_last_word(history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(Month5)
+    Month6 = remove_last_word(history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
+    #print(Month5)
+    message_code_df1 = message_code_df.T
+   
+    for label, content in message_code_df.items():
+       
+        if Month1==content[0]:
+            #print(label)
+            history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        if Month2==content[0]:
+            #print(label)
+            history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        if Month3==content[0]:
+            #print(label)
+            history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        if Month4==content[0]:
+            history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        if Month5==content[0]:
+            #print(label)
+            history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        if Month6==content[0]:
+            #print(label)
+            history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
+        
+        
+
+       
+    message_code_df1.to_csv("message_code_df.csv")
     history_df.to_csv("history_df.csv")
-    # max_value = column.max()
-    # # print(max_value)
-
-    # h = applied_individual_messages["message_score"].idxmax()
-    # # print(h)
-    # message_selected_df = applied_individual_messages.iloc[h, :]
-    # #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
-    # message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
-    # message = "Message_ids."+message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
-    # message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
-
-    # #print(type(message_code_df))
-    
-
-    # #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
-    # #message_selected_df.drop(['score','display_score','message_score'], axis=1)
-    # message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
-    # #message_selected_df = message_selected_df.T
+ 
     return history_df
+def remove_last_word(sentence):
+    words = sentence.split()
+    s = " ".join(words[:-1])
+    return s
 
 
 
