@@ -179,14 +179,13 @@ def apply_history_message(applied_individual_messages,history,max_val,message_co
         if Month6==content[0]:
             #print(label)
             history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        
-        
-
-       
+    
+    
+    
     message_code_df1.to_csv("message_code_df.csv")
     history_df.to_csv("history_df.csv")
- 
     return history_df
+
 def remove_last_word(sentence):
     words = sentence.split()
     s = " ".join(words[:-1])
