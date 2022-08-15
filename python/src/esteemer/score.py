@@ -147,6 +147,29 @@ def apply_history_message(applied_individual_messages,history,max_val,message_co
    
     message_code_df = pd.json_normalize(message_code)
     history_df =pd.json_normalize(history)
+    applied_individual_messages.to_csv("applied_individual_messages.csv")
+    history_df.to_csv("history_df.csv")
+    # Using DataFrame.copy() create new DaraFrame.
+    month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']].copy()
+    month2 = history_df[['History.Month2.psdo:PerformanceSummaryDisplay{Literal}','History.Month2.Measure Name','History.Month2.Message Code']].copy()
+    month3 = history_df[['History.Month3.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month3.Message Code']].copy()
+    month4 = history_df[['History.Month4.psdo:PerformanceSummaryDisplay{Literal}','History.Month4.Measure Name','History.Month4.Message Code']].copy()
+    month5 = history_df[['History.Month5.psdo:PerformanceSummaryDisplay{Literal}','History.Month5.Measure Name','History.Month5.Message Code']].copy()
+    month6 = history_df[['History.Month6.psdo:PerformanceSummaryDisplay{Literal}','History.Month6.Measure Name','History.Month6.Message Code']].copy()
+    #month1['History.Month1.psdo:PerformanceSummaryDisplay{Literal}'][0]
+    print(row['psdo:PerformanceSummaryDisplay{Literal}'],row['psdo:PerformanceSummaryTextualEntity{Literal}'],row['Measure Name'])
+    applied_individual_messages.reset_index()
+    for index, row in applied_individual_messages.iterrows():
+        if (month1['History.Month1.Measure Name'][0]== row['Measure Name'] and month1['History.Month1.Message Code'][0]== row['Message Code'] ):
+           
+            
+    #month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']]
+    #month2 = history_df[['History.Month2.psdo:PerformanceSummaryDisplay{Literal}','History.Month2.Measure Name','History.Month2.Message Code']]
+    #month3 = history_df[['History.Month3.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month3.Message Code']]
+    #month4 = history_df[['History.Month4.psdo:PerformanceSummaryDisplay{Literal}','History.Month4.Measure Name','History.Month4.Message Code']]
+    #month5 = history_df[['History.Month5.psdo:PerformanceSummaryDisplay{Literal}','History.Month5.Measure Name','History.Month5.Message Code']]
+    #month6 = history_df[['History.Month6.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month6.Message Code']]
+    #month1.to_csv("month1.csv")
     Month1 = remove_last_word(history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
     Month2 = remove_last_word(history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
     #print(Month2)
@@ -180,10 +203,10 @@ def apply_history_message(applied_individual_messages,history,max_val,message_co
             #print(label)
             history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
     
-    
-    
+    #new = old[['A', 'C', 'D']].copy()
+    #month1_history= history_df[['History.Month1.psdo:PerformanceSummaryDisplayCompatibletype{Literal}','History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'
     message_code_df1.to_csv("message_code_df.csv")
-    history_df.to_csv("history_df.csv")
+    
     return history_df
 
 def remove_last_word(sentence):
@@ -205,25 +228,35 @@ def select(applied_individual_messages,max_val,message_code):
     #message_code_df.to_csv("message_code_df.csv")
     max_value = column.max()
     # print(max_value)
-
+    #applied_individual_messages
     h = applied_individual_messages["message_score"].idxmax()
     # print(h)
+    
     message_selected_df = applied_individual_messages.iloc[h, :]
+    
     #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
     message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
     message = "Message_ids."+message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
+    #print(message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}'])
+    #print(type(message_selected_df))
+    #code= message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
+    message_selected_df = message_selected_df.append(pd.Series(message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}'], index=['Message Code']))
     message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
 
+    #print(message_selected_df['message_code'])
     #print(type(message_code_df))
     
 
     #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
+    message_selected_df   = message_selected_df.drop(['score','display_score','message_score']);
     #message_selected_df.drop(['score','display_score','message_score'], axis=1)
-    message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
+    #print(message_selected_df)
+    #message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
     message_selected_df = message_selected_df.T
-    
+    #print(message_selected_df)
     # print(message_selected_df)
+    #message_selected_df = message_selected_df.append(code)
     # message_selected_df.to_csv("Selected_Message.csv")
     data = message_selected_df.to_json(orient="index", indent=2 )
-   
+    #print(data)
     return data.replace("\\", "")
