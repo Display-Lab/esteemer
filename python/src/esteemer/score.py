@@ -147,7 +147,7 @@ def apply_history_message(applied_individual_messages,history,max_val,message_co
    
     message_code_df = pd.json_normalize(message_code)
     history_df =pd.json_normalize(history)
-    applied_individual_messages.to_csv("applied_individual_messages.csv")
+    #applied_individual_messages.to_csv("applied_individual_messages.csv")
     history_df.to_csv("history_df.csv")
     # Using DataFrame.copy() create new DaraFrame.
     month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']].copy()
@@ -157,57 +157,33 @@ def apply_history_message(applied_individual_messages,history,max_val,message_co
     month5 = history_df[['History.Month5.psdo:PerformanceSummaryDisplay{Literal}','History.Month5.Measure Name','History.Month5.Message Code']].copy()
     month6 = history_df[['History.Month6.psdo:PerformanceSummaryDisplay{Literal}','History.Month6.Measure Name','History.Month6.Message Code']].copy()
     #month1['History.Month1.psdo:PerformanceSummaryDisplay{Literal}'][0]
-    print(row['psdo:PerformanceSummaryDisplay{Literal}'],row['psdo:PerformanceSummaryTextualEntity{Literal}'],row['Measure Name'])
+    #print(row['psdo:PerformanceSummaryDisplay{Literal}'],row['psdo:PerformanceSummaryTextualEntity{Literal}'],row['Measure Name'])
     applied_individual_messages.reset_index()
     for index, row in applied_individual_messages.iterrows():
-        if (month1['History.Month1.Measure Name'][0]== row['Measure Name'] and month1['History.Month1.Message Code'][0]== row['Message Code'] ):
-           
+        if (month1['History.Month1.Measure Name'][0]== row['Measure Name'] and month1['History.Month1.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            applied_individual_messages = applied_individual_messages.drop(index)
+        if (month2['History.Month2.Measure Name'][0]== row['Measure Name'] and month2['History.Month2.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            applied_individual_messages = applied_individual_messages.drop(index)
+        if (month3['History.Month3.Measure Name'][0]== row['Measure Name'] and month3['History.Month3.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            print(row['Measure Name'])
+            print(month3['History.Month3.Measure Name'][0])
+            applied_individual_messages = applied_individual_messages.drop(index)
+        if (month4['History.Month4.Measure Name'][0]== row['Measure Name'] and month4['History.Month4.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            print(row['Measure Name'])
+            print(month4['History.Month4.Measure Name'][0])
+            applied_individual_messages = applied_individual_messages.drop(index)
+        if (month5['History.Month5.Measure Name'][0]== row['Measure Name'] and month5['History.Month5.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            print(row['Measure Name'])
+            print(month5['History.Month5.Measure Name'][0])
+            applied_individual_messages = applied_individual_messages.drop(index)
+        if (month6['History.Month6.Measure Name'][0]== row['Measure Name'] and month6['History.Month6.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
+            print(row['Measure Name'])
+            print(month6['History.Month6.Measure Name'][0])
+            applied_individual_messages = applied_individual_messages.drop(index)
             
-    #month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']]
-    #month2 = history_df[['History.Month2.psdo:PerformanceSummaryDisplay{Literal}','History.Month2.Measure Name','History.Month2.Message Code']]
-    #month3 = history_df[['History.Month3.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month3.Message Code']]
-    #month4 = history_df[['History.Month4.psdo:PerformanceSummaryDisplay{Literal}','History.Month4.Measure Name','History.Month4.Message Code']]
-    #month5 = history_df[['History.Month5.psdo:PerformanceSummaryDisplay{Literal}','History.Month5.Measure Name','History.Month5.Message Code']]
-    #month6 = history_df[['History.Month6.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month6.Message Code']]
-    #month1.to_csv("month1.csv")
-    Month1 = remove_last_word(history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    Month2 = remove_last_word(history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(Month2)
-    Month3 = remove_last_word(history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(Month3)
-    Month4 = remove_last_word(history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(Month4)
-    Month5 = remove_last_word(history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(Month5)
-    Month6 = remove_last_word(history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0])
-    #print(Month5)
-    message_code_df1 = message_code_df.T
    
-    for label, content in message_code_df.items():
-       
-        if Month1==content[0]:
-            #print(label)
-            history_df['History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        if Month2==content[0]:
-            #print(label)
-            history_df['History.Month2.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        if Month3==content[0]:
-            #print(label)
-            history_df['History.Month3.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        if Month4==content[0]:
-            history_df['History.Month4.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        if Month5==content[0]:
-            #print(label)
-            history_df['History.Month5.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
-        if Month6==content[0]:
-            #print(label)
-            history_df['History.Month6.psdo:PerformanceSummaryTextualEntity{Literal}'].values[0]=label.split(".",1)[1]
     
-    #new = old[['A', 'C', 'D']].copy()
-    #month1_history= history_df[['History.Month1.psdo:PerformanceSummaryDisplayCompatibletype{Literal}','History.Month1.psdo:PerformanceSummaryTextualEntity{Literal}'
-    message_code_df1.to_csv("message_code_df.csv")
-    
-    return history_df
+    return applied_individual_messages
 
 def remove_last_word(sentence):
     words = sentence.split()

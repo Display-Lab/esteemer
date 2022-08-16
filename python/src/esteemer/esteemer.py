@@ -56,7 +56,7 @@ applied_history_filter = apply_history_message(applied_individual_messages,histo
 
 # select maximum of the meaningful_messages
 
-finalData = select(applied_individual_messages,val[0],message_code)
+finalData = select(applied_history_filter,val[0],message_code)
 
 
 
