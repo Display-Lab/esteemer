@@ -82,9 +82,7 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
         if text in x :
             row['score'] = row['score']*nochart_pref
         display_score.append(row['score'])
-        #display_pref['DataFrame Column'] = df['DataFrame Column'].astype(int)
-        #print(row['score'])
-        #print(x)
+
     meaningful_messages_final['display_score'] = display_score
     
     return meaningful_messages_final,max_val
@@ -143,57 +141,33 @@ def messagepreferences(display_preferences,message_preferences_df):
 
 
 def apply_history_message(applied_individual_messages,history,max_val,message_code):
-    # max value of score
-   
     message_code_df = pd.json_normalize(message_code)
     history_df =pd.json_normalize(history)
-    #applied_individual_messages.to_csv("applied_individual_messages.csv")
     history_df.to_csv("history_df.csv")
-    # Using DataFrame.copy() create new DaraFrame.
     month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']].copy()
     month2 = history_df[['History.Month2.psdo:PerformanceSummaryDisplay{Literal}','History.Month2.Measure Name','History.Month2.Message Code']].copy()
     month3 = history_df[['History.Month3.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month3.Message Code']].copy()
     month4 = history_df[['History.Month4.psdo:PerformanceSummaryDisplay{Literal}','History.Month4.Measure Name','History.Month4.Message Code']].copy()
     month5 = history_df[['History.Month5.psdo:PerformanceSummaryDisplay{Literal}','History.Month5.Measure Name','History.Month5.Message Code']].copy()
     month6 = history_df[['History.Month6.psdo:PerformanceSummaryDisplay{Literal}','History.Month6.Measure Name','History.Month6.Message Code']].copy()
-    
-    
-    #month1['History.Month1.psdo:PerformanceSummaryDisplay{Literal}'][0]
-    #print(row['psdo:PerformanceSummaryDisplay{Literal}'],row['psdo:PerformanceSummaryTextualEntity{Literal}'],row['Measure Name'])
     applied_individual_messages.reset_index()
     for index, row in applied_individual_messages.iterrows():
         disp=row['psdo:PerformanceSummaryDisplay{Literal}'].split(",")
-        #print(disp)
-        #month1['History.Month1.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and
         if (month1['History.Month1.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month1['History.Month1.Measure Name'][0]== row['Measure Name'] and month1['History.Month1.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
             applied_individual_messages = applied_individual_messages.drop(index)
         if (month2['History.Month2.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month2['History.Month2.Measure Name'][0]== row['Measure Name'] and month2['History.Month2.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
             applied_individual_messages = applied_individual_messages.drop(index)
         if (month3['History.Month3.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month3['History.Month3.Measure Name'][0]== row['Measure Name'] and month3['History.Month3.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
-            #print(row['Measure Name'])
-            #print(month3['History.Month3.Measure Name'][0])
             applied_individual_messages = applied_individual_messages.drop(index)
         if (month4['History.Month4.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month4['History.Month4.Measure Name'][0]== row['Measure Name'] and month4['History.Month4.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
-            #print(row['Measure Name'])
-            #print(month4['History.Month4.Measure Name'][0])
             applied_individual_messages = applied_individual_messages.drop(index)
         if (month5['History.Month5.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month5['History.Month5.Measure Name'][0]== row['Measure Name'] and month5['History.Month5.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
-            #print(row['Measure Name'])
-            #print(month5['History.Month5.Measure Name'][0])
             applied_individual_messages = applied_individual_messages.drop(index)
         if (month6['History.Month6.psdo:PerformanceSummaryDisplay{Literal}'][0] in disp and month6['History.Month6.Measure Name'][0]== row['Measure Name'] and month6['History.Month6.Message Code'][0]== row['psdo:PerformanceSummaryTextualEntity{Literal}'] ):
-            #print(row['Measure Name'])
-            #print(month6['History.Month6.Measure Name'][0])
             applied_individual_messages = applied_individual_messages.drop(index)
-            
-   
-    
     return applied_individual_messages
 
-def remove_last_word(sentence):
-    words = sentence.split()
-    s = " ".join(words[:-1])
-    return s
+
 
 
 
@@ -206,38 +180,14 @@ def select(applied_individual_messages,max_val,message_code):
     # max value of score
     column = applied_individual_messages["message_score"]
     message_code_df = pd.json_normalize(message_code)
-    #message_code_df.to_csv("message_code_df.csv")
     max_value = column.max()
-    # print(max_value)
-    #applied_individual_messages
     h = applied_individual_messages["message_score"].idxmax()
-    # print(h)
-    
     message_selected_df = applied_individual_messages.iloc[h, :]
-    
-    #print(type(message_selected_df['psdo:PerformanceSummaryDisplay{Literal}']))
     message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
     message = "Message_ids."+message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
-    #print(message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}'])
-    #print(type(message_selected_df))
-    #code= message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']
     message_selected_df = message_selected_df.append(pd.Series(message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}'], index=['Message Code']))
     message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}']=message_code_df.at[0,message]
-
-    #print(message_selected_df['message_code'])
-    #print(type(message_code_df))
-    
-
-    #print(message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}'])
     message_selected_df   = message_selected_df.drop(['score','display_score','message_score']);
-    #message_selected_df.drop(['score','display_score','message_score'], axis=1)
-    #print(message_selected_df)
-    #message_selected_df.drop(message_selected_df.tail(3).index,inplace=True)
     message_selected_df = message_selected_df.T
-    #print(message_selected_df)
-    # print(message_selected_df)
-    #message_selected_df = message_selected_df.append(code)
-    # message_selected_df.to_csv("Selected_Message.csv")
     data = message_selected_df.to_json(orient="index", indent=2 )
-    #print(data)
     return data.replace("\\", "")
