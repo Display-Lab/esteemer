@@ -88,7 +88,7 @@ def displaypreferences(meaningful_messages_final,display_preferences_df):
     return meaningful_messages_final,max_val
 
 def messagepreferences(display_preferences,message_preferences_df):
-    message_preferences_df.to_csv('before_select.csv')
+    #message_preferences_df.to_csv('before_select.csv')
     top_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.1'])
     nontop_performer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.2'])
     performance_dropped_below_peer_pref=float(message_preferences_df.at[0,'Utilities.Message_Format.16'])
@@ -143,7 +143,7 @@ def messagepreferences(display_preferences,message_preferences_df):
 def apply_history_message(applied_individual_messages,history,max_val,message_code):
     message_code_df = pd.json_normalize(message_code)
     history_df =pd.json_normalize(history)
-    history_df.to_csv("history_df.csv")
+    #history_df.to_csv("history_df.csv")
     month1 = history_df[['History.Month1.psdo:PerformanceSummaryDisplay{Literal}','History.Month1.Measure Name','History.Month1.Message Code']].copy()
     month2 = history_df[['History.Month2.psdo:PerformanceSummaryDisplay{Literal}','History.Month2.Measure Name','History.Month2.Message Code']].copy()
     month3 = history_df[['History.Month3.psdo:PerformanceSummaryDisplay{Literal}','History.Month3.Measure Name','History.Month3.Message Code']].copy()
@@ -180,12 +180,12 @@ def select(applied_individual_messages,max_val,message_code):
     # max value of score
     column = applied_individual_messages["message_score"]
     message_code_df = pd.json_normalize(message_code)
-    message_code_df.to_csv("message_code.csv")
+    #message_code_df.to_csv("message_code.csv")
     # max_value = column.max()
     h = applied_individual_messages["message_score"].idxmax()
     message_selected_df = applied_individual_messages.iloc[h, :]
     message_selected_df.at['psdo:PerformanceSummaryDisplay{Literal}']=max_val
-    message_selected_df.to_csv('message_selected.csv')
+    #message_selected_df.to_csv('message_selected.csv')
     mes_id=message_selected_df.at['psdo:PerformanceSummaryTextualEntity{Literal}'].split(".")
     #print(mes_id[0])
     message = "Message_ids."+mes_id[0]
