@@ -17,7 +17,7 @@ pip install -e [path/to/module/displaylab/esteemer/python]
 
 ## Running the Esteemer script 
 ```sh
-python -m esteemer.esteemer [/path/to/spek_tp.json]
+python -m esteemer.esteemer [/path/to/spek_tp.json][/path/to/spek_preferences.json][/path/to/spek_message_id.json][/path/to/spek_history.json]
 ```
 
 ## Running the pfp pipeline (pfp.sh)
