@@ -90,15 +90,15 @@ def transform(contenders_graph,measures_graph,comparator_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    #contender_messages_df.to_csv("contenders.csv")
+    contender_messages_df.to_csv("contenders.csv")
     measures_df = to_dataframe(measures_graph)
     measures_df.reset_index(inplace=True)
     measures_df = measures_df.rename(columns={"index": "id"})
-    #measures_df.to_csv("measures.csv")
+    measures_df.to_csv("measures.csv")
     comparator_df = to_dataframe(comparator_graph)
     comparator_df.reset_index(inplace=True)
     comparator_df = comparator_df.rename(columns={"index": "id"})
-    #comparator_df.to_csv("comparators.csv")
+    comparator_df.to_csv("comparators.csv")
     column_values = [
         "obo:RO_0000091{BNode}[0]",
         "obo:RO_0000091{BNode}[1]",
@@ -155,7 +155,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
     RegardingMeasure = []
     disposition = []
     values = []
-
+    
     for rowIndex, row in meaningful_messages_df.iterrows():  # iterate over rows
         b = 0
         for columnIndex, value in row.items():
