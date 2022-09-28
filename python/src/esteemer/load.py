@@ -90,15 +90,15 @@ def transform(contenders_graph,measures_graph,comparator_graph):
     contender_messages_df = to_dataframe(contenders_graph)
     contender_messages_df.reset_index(inplace=True)
     contender_messages_df = contender_messages_df.rename(columns={"index": "id"})
-    #contender_messages_df.to_csv("contenders.csv")
+    contender_messages_df.to_csv("contenders.csv")
     measures_df = to_dataframe(measures_graph)
     measures_df.reset_index(inplace=True)
     measures_df = measures_df.rename(columns={"index": "id"})
-    #measures_df.to_csv("measures.csv")
+    measures_df.to_csv("measures.csv")
     comparator_df = to_dataframe(comparator_graph)
     comparator_df.reset_index(inplace=True)
     comparator_df = comparator_df.rename(columns={"index": "id"})
-    #comparator_df.to_csv("comparators.csv")
+    comparator_df.to_csv("comparators.csv")
     column_values = [
         "obo:RO_0000091{BNode}[0]",
         "obo:RO_0000091{BNode}[1]",
@@ -111,6 +111,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
         "obo:RO_0000091{BNode}[8]",
         "obo:RO_0000091{BNode}[9]",
         "obo:RO_0000091{BNode}[10]",
+        "obo:RO_0000091{BNode}[11]",
     ]
     column_values1 =[
       "RegardingComparator",
@@ -194,7 +195,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
         ],
         axis=1,
     )
-    #intermediate_messages_final.to_csv("intermediate.csv")
+    intermediate_messages_final.to_csv("intermediate.csv")
     
     # with_comparator_0 =[]
     # with_comparator_1 =[]
@@ -244,7 +245,7 @@ def transform(contenders_graph,measures_graph,comparator_graph):
     # #intermediate_messages_final["comparison value"] = comparison_value
     # #intermediate_messages_final["name"]=name
            
-    #intermediate_messages_final.to_csv("intermediate1.csv")
+    intermediate_messages_final.to_csv("intermediate1.csv")
      
     meaningful_messages_final = intermediate_messages_final.filter(
         [
