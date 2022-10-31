@@ -32,6 +32,9 @@ f1=open(sys.argv[3])
 message_code= json.load(f1)
 f2=open(sys.argv[4])
 history=json.load(f2)
+performance_data_df = pd.read_csv(sys.argv[5])
+measure_list=[]
+measure_list=performance_data_df['Measure_Name'].drop_duplicates()
 #indv_preferences_read_df = pd.read_json(sys.argv[2], lines=True)
 contenders_graph = read_contenders(graph_read)
 measures_graph = read_measures(graph_read)
@@ -40,7 +43,7 @@ comparator_graph = read_comparators(graph_read)
 # contenders_graph=graph_from_sparql_endpoint("http://localhost:3030/ds/sparql")
 # print(contenders_graph.serialize(format="ttl"))
 # Transform dataframe to more meaningful dataframe
-meaningful_messages_final = transform(contenders_graph,measures_graph,comparator_graph)
+meaningful_messages_final = transform(contenders_graph,measures_graph,comparator_graph,measure_list)
 # print(meaningful_messages_final)
 # assign score for each of meaningful_messages
 start_time1 = time.time()

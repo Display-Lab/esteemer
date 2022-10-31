@@ -81,7 +81,7 @@ def read_comparators(graph_read):
     return qres.graph
 
 
-def transform(contenders_graph,measures_graph,comparator_graph):
+def transform(contenders_graph,measures_graph,comparator_graph,measure_list):
     start_time = time.time()
     contenders_graph.bind("obo", "http://purl.obolibrary.org/obo/")
     contenders_graph.bind("slowmo", "http://example.com/slowmo#")
@@ -267,10 +267,11 @@ def transform(contenders_graph,measures_graph,comparator_graph):
         ],
         axis=1,
     )
+    newdf = meaningful_messages_final[meaningful_messages_final['Measure Name'].isin(measure_list)]
     #meaningful_messages_final.to_csv("final_list.csv")
     logging.critical("transforming--- %s seconds ---" % (time.time() - start_time))
     # return contender_messages_df
-    return meaningful_messages_final
+    return newdf
 
 
 
